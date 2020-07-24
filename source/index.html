@@ -1,12 +1,240 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body>
+  <body class="page-body">
+    <header class="page-header">
+      <a class="page-header__logo" href="#">
+        <img src="https://via.placeholder.com/150x150" alt="">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle js-menu-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="#">О сервисе</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Направления</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">Попутчики</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__button js-login button button--round" href="login.html">Авторизация</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list contacts-list">
+            <li class="contacts-list__item">
+              <a href="tel:+88005558628">8 800 555-86-28</a>
+            </li>
+            <li class="contacts-list__item">
+              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list main-nav__socials socials-list">
+            <li class="socials-list__item">
+              <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            </li>
+            <li class="socials-list__item">
+              <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            </li>
+            <li class="socials-list__item">
+              <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <!-- Изменить блок промо -->
+      <section class="promo">
+        <div class="promo__wrapper">
+          <p class="promo__slogan">В путешествие с крутыми попутчиками!</p>
+          <img src="https://via.placeholder.com/150x150" alt="">
+          <div class="promo__nav-list">
+            <ul class="promo__nav-list__item user-list">
+              <li class="user-list__item">
+                <a class="user-list__button js-login button button--round" href="login.html">Авторизация</a>
+              </li>
+            </ul>
+            <ul class="promo__nav-list__item contacts-list">
+              <li class="contacts-list__item">
+                <a href="tel:+88005558628">8 800 555-86-28</a>
+              </li>
+              <li class="contacts-list__item">
+                <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </li>
+            </ul>
+          </div>
+          <blockquote class="promo__blockquote">
+            <p class="promo__blockquote-quote"><q>Лучшее приложение, что я видел в жизни!</q></p>
+            <cite class="promo__blockquote-author">Мурат Эльтазин главный редактор газеты <q>гаджетлайф</q></cite>
+          </blockquote>
+          <ol class="promo__list steps-list">
+            <li class="steps-list__item">Выберите направление</li>
+            <li class="steps-list__item">Изучите идеи путешественников</li>
+            <li class="steps-list__item">Находите тех, кто похож на вас</li>
+            <li class="steps-list__item">Путешествуйте вместе!</li>
+          </ol>
+        </div>
+      </section>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+      <!-- Изменить блок о сервисе -->
+      <section class="about">
+        <div class="about__wrapper">
+          <h2 class="title">О сервисе</h2>
+          <p>Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+          <p><b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b></p>
+          <a class="button button--round-square" href="#">Подробнее</a>
+        </div>
+      </section>
 
+      <!-- Изменить блок направлений (пс точно понадобится врапер) -->
+      <section class="directions">
+        <div class="directions__wrapper">
+          <h2 class="title">Направления</h2>
+          <p>Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+          <ul class="directions__list countries-list">
+            <li class="countries-list__item">
+              <img src="https://via.placeholder.com/150x150" alt="">
+              <div class="countries-list__container">
+                <div class="countries-list__description">
+                  <h3 class="countries-list__country-name">Таиланд</h3>
+                  <p class="countries-list__slogan">Джунгли зовут!</p>
+                </div>
+                <span class="countries-list__counter">18321</span>
+              </div>
+            </li>
+            <li class="countries-list__item">
+              <img src="https://via.placeholder.com/150x150" alt="">
+              <div class="countries-list__container">
+                <div class="countries-list__description">
+                  <h3 class="countries-list__country-name">Франция</h3>
+                  <p class="countries-list__slogan">Трэ бьен, манифик!</p>
+                </div>
+                <span class="countries-list__counter">12518</span>
+              </div>
+            </li>
+            <li class="countries-list__item">
+              <img src="https://via.placeholder.com/150x150" alt="">
+              <div class="countries-list__container">
+                <div class="countries-list__description">
+                  <h3 class="countries-list__country-name">Чехия</h3>
+                  <p class="countries-list__slogan">Закоулки старой Европы</p>
+                </div>
+                <span class="countries-list__counter">5326</span>
+              </div>
+            </li>
+          </ul>
+          <a class="button button--round-square" href="#">Показать все</a>
+        </div>
+      </section>
+
+      <!-- Изменить блок попутчиков (пс точно понадобится врапер) -->
+      <section class="users">
+        <div class="users__wrapper">
+          <h2 class="title">Попутчики</h2>
+          <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <p><b>Теперь можно легко найти единомышленников!</b></p>
+          <ul class="users__list companions-list">
+            <li class="companions-list__item">
+              <img src="https://via.placeholder.com/150x150" alt="">
+              <!-- Добавить уровень  -->
+              <div class="companions-list__container">
+                <ul class="companions-list__countries-list">
+                  <li class="companions-list__countries-item companions-list__countries-item--sri-lanka">Шри-ланка</li>
+                  <li class="companions-list__countries-item companions-list__countries-item--thailand">Тайланд</li>
+                  <li class="companions-list__countries-item companions-list__countries-item--seychelles">Сейшелы</li>
+                </ul>
+                <h3 class="companions-list__user companions-list__user--offline">Таня Фирсова</h3>
+                <p class="companions-list__hashtag-list">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                <ul class="companions-list__transport-list">
+                  <li class="companions-list__transport-item companions-list__transport-item--available companions-list__transport-item--plane">Самолёт</li>
+                  <li class="companions-list__transport-item companions-list__transport-item--unavailable companions-list__transport-item--bus">Автобус</li>
+                  <li class="companions-list__transport-item companions-list__transport-item--unavailable companions-list__transport-item--bicycle">Велосипед</li>
+                  <li class="companions-list__transport-item companions-list__transport-item--unavailable companions-list__transport-item--on-foot">Пешком</li>
+                </ul>
+              </div>
+            </li>
+            <li class="companions-list__item">
+              <img src="https://via.placeholder.com/150x150" alt="">
+              <!-- Добавить уровень  -->
+              <div class="companions-list__container">
+                <ul class="companions-list__countries-list">
+                  <li class="companions-list__countries-item companions-list__countries-item--belgium">Бельгия</li>
+                  <li class="companions-list__countries-item companions-list__countries-item--czech">Чехия</li>
+                </ul>
+                <h3 class="companions-list__user companions-list__user--online">Петя Демин</h3>
+                <p class="companions-list__hashtag-list">#бургер #бар #футбол #концерт #крафт</p>
+                <ul class="companions-list__transport-list">
+                  <li class="companions-list__transport-item companions-list__transport-item--available companions-list__transport-item--plane">Самолёт</li>
+                  <li class="companions-list__transport-item companions-list__transport-item--available companions-list__transport-item--bus">Автобус</li>
+                  <li class="companions-list__transport-item companions-list__transport-item--unavailable companions-list__transport-item--bicycle">Велосипед</li>
+                  <li class="companions-list__transport-item companions-list__transport-item--available companions-list__transport-item--on-foot">Пешком</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <a class="button button--round-square" href="#">Показать всех</a>
+        </div>
+      </section>
+
+      <!-- Изменить блок профиля ?? отсутсвует декор элемент Изменить классы -->
+      <section class="profile">
+        <div class="profile__wrapper">
+          <h2 class="title">Добавьте свой профиль</h2>
+          <dl class="profile__list rates-list">
+            <div class="rates-list__item">
+              <dt>Базовое размещение</dt>
+              <dd>Бесплатно</dd>
+            </div>
+            <div class="rates-list__item">
+              <dt>Базовое размещение</dt>
+              <dd>99 руб./мес</dd>
+            </div>
+            <div class="rates-list__item">
+              <dt>Базовое размещение</dt>
+              <dd>59 руб./мес</dd>
+            </div>
+          </dl>
+          <a href="#">Показать тарифы для бизнеса</a>
+        </section>
+      </div>
+    </main>
+
+<!-- Изменить футер -->
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="#">
+          <img src="https://via.placeholder.com/150x150" alt="">
+        </a>
+        <ul class="page-footer__list page-footer__socials socials-list">
+          <li class="socials-list__item">
+            <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Добавить модульные окна и скрипты -->
   </body>
 </html>
