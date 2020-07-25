@@ -17,14 +17,14 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="#">О сервисе</a>
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--active" href="#">О сервисе</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Направления</a>
+              <a class="site-list__link" href="form.html">Направления</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Попутчики</a>
+              <a class="site-list__link" href="catalog.html">Попутчики</a>
             </li>
           </ul>
           <ul class="main-nav__list user-list">
@@ -150,18 +150,34 @@
               <img src="https://via.placeholder.com/150x150" alt="">
               <!-- Добавить уровень  -->
               <div class="companions-list__container">
-                <ul class="companions-list__countries-list">
-                  <li class="companions-list__countries-item companions-list__countries-item--sri-lanka">Шри-ланка</li>
-                  <li class="companions-list__countries-item companions-list__countries-item--thailand">Тайланд</li>
-                  <li class="companions-list__countries-item companions-list__countries-item--seychelles">Сейшелы</li>
+                <ul class="countries-list">
+                  <li class="countries-list__item countries-list__item--sri-lanka">
+                    <span class="tooltip">Шри-ланка</span>
+                  </li>
+                  <li class="countries-list__item countries-list__item--thailand">
+                    <span class="tooltip">Тайланд</span>
+                  </li>
+                  <li class="countries-list__item countries-list__item--seychelles">
+                    <span class="tooltip">Сейшелы</span>
+                  </li>
                 </ul>
-                <h3 class="companions-list__user companions-list__user--offline">Таня Фирсова</h3>
+                <a class="companions-list__link" href="#">
+                  <h3 class="companions-list__user companions-list__user--offline">Таня Фирсова</h3>
+                </a>
                 <p class="companions-list__hashtag-list">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-                <ul class="companions-list__transport-list">
-                  <li class="companions-list__transport-item companions-list__transport-item--available companions-list__transport-item--plane">Самолёт</li>
-                  <li class="companions-list__transport-item companions-list__transport-item--unavailable companions-list__transport-item--bus">Автобус</li>
-                  <li class="companions-list__transport-item companions-list__transport-item--unavailable companions-list__transport-item--bicycle">Велосипед</li>
-                  <li class="companions-list__transport-item companions-list__transport-item--unavailable companions-list__transport-item--on-foot">Пешком</li>
+                <ul class="transport-list">
+                  <li class="transport-list__item transport-list__item--available transport-list__item--air-flight">
+                    <span class="tooltip">Авиаперелет</span>
+                  </li>
+                  <li class="transport-list__item transport-list__item--unavailable transport-list__item--vehicle">
+                    <span class="tooltip">Автотранспорт</span>
+                  </li>
+                  <li class="transport-list__item transport-list__item--unavailable transport-list__item--bicycle">
+                    <span class="tooltip">Велосипед</span>
+                  </li>
+                  <li class="transport-list__item transport-list__item--unavailable transport-list__item--on-foot">
+                    <span class="tooltip">Пешком</span>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -169,17 +185,31 @@
               <img src="https://via.placeholder.com/150x150" alt="">
               <!-- Добавить уровень  -->
               <div class="companions-list__container">
-                <ul class="companions-list__countries-list">
-                  <li class="companions-list__countries-item companions-list__countries-item--belgium">Бельгия</li>
-                  <li class="companions-list__countries-item companions-list__countries-item--czech">Чехия</li>
+                <ul class="countries-list">
+                  <li class="countries-list__item countries-list__item--belgium">
+                    <span class="tooltip">Бельгия</span>
+                  </li>
+                  <li class="countries-list__item countries-list__item--czech">
+                    <span class="tooltip">Чехия</span>
+                  </li>
                 </ul>
-                <h3 class="companions-list__user companions-list__user--online">Петя Демин</h3>
+                <a class="companions-list__link" href="#">
+                  <h3 class="companions-list__user companions-list__user--online">Петя Демин</h3>
+                </a>
                 <p class="companions-list__hashtag-list">#бургер #бар #футбол #концерт #крафт</p>
-                <ul class="companions-list__transport-list">
-                  <li class="companions-list__transport-item companions-list__transport-item--available companions-list__transport-item--plane">Самолёт</li>
-                  <li class="companions-list__transport-item companions-list__transport-item--available companions-list__transport-item--bus">Автобус</li>
-                  <li class="companions-list__transport-item companions-list__transport-item--unavailable companions-list__transport-item--bicycle">Велосипед</li>
-                  <li class="companions-list__transport-item companions-list__transport-item--available companions-list__transport-item--on-foot">Пешком</li>
+                <ul class="transport-list">
+                  <li class="transport-list__item transport-list__item--available transport-list__item--air-flight">
+                    <span class="tooltip">Авиаперелет</span>
+                  </li>
+                  <li class="transport-list__item transport-list__item--available transport-list__item--vehicle">
+                    <span class="tooltip">Автотранспорт</span>
+                  </li>
+                  <li class="transport-list__item transport-list__item--unavailable transport-list__item--bicycle">
+                    <span class="tooltip">Велосипед</span>
+                  </li>
+                  <li class="transport-list__item transport-list__item--available transport-list__item--on-foot">
+                    <span class="tooltip">Пешком</span>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -207,8 +237,37 @@
             </div>
           </dl>
           <a href="#">Показать тарифы для бизнеса</a>
+        </div>
         </section>
-      </div>
+
+        <section class="feedback">
+          <div class="feedback__wrapper">
+            <h2 class="title">Заинтересовались?</h2>
+            <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="#">авторизуйтесь</a>.</p>
+            <form action="#" method="POST">
+              <input type="email" placeholder="E-mail">
+              <button type="submit">Регистрация</button>
+            </form>
+            <p>Остались вопросы? Мы с радостью на них ответим!</p>
+            <ul class="main-nav__list contacts-list">
+              <li class="contacts-list__item">
+                <a href="tel:+88005558628">8 800 555-86-28</a>
+              </li>
+              <li class="contacts-list__item">
+                <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="contact-address">
+          <div class="contact-address__wrapper">
+            <h2 class="visually-hidden">Контактный адрес</h2>
+            <address class="contact-address__address">ул. Большая Конюшенная, 19/8</address>
+            <a class="button button--round-square" href="#">Проложить маршрут</a>
+            <iframe class="contact-address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.730413298935!2d30.321083488257898!3d59.93608393541578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631057d105877%3A0x91c16b0cf63dfa74!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsA!5e0!3m2!1sru!2sru!4v1595592147810!5m2!1sru!2sru&zoom=0" width="320" height="424" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </section>
     </main>
 
 <!-- Изменить футер -->

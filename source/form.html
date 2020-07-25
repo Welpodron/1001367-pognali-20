@@ -56,6 +56,172 @@
     </header>
     <main class="page-main">
 
+      <section class="my-plans">
+        <div class="my-plans__wrapper">
+          <h2 class="title">Мои планы:</h2>
+          <ol>
+            <li>
+              <p>Франция, Италия</p>
+              <p>3 попутчика</p>
+              <p><time datetime="2020-03-26">26 мар</time> — <time datetime="2020-03-29">29 мар</time></p>
+              <a href="">Изменить</a>
+            </li>
+            <li>
+              <p>Тайланд, Индонезия</p>
+              <p>1 попутчик</p>
+              <p><time datetime="2020-07-01">1 июл</time> — <time datetime="2020-07-15">15 июл</time></p>
+              <a href="">Изменить</a>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="plans">
+        <div class="plans__wrapper">
+          <h2>Добавить план:</h2>
+          <ol class="progress-bar">
+            <li>Даты</li>
+            <li>Маршрут</li>
+            <li>Развлечения</li>
+          </ol>
+          <form action="">
+            <fieldset>
+              <legend>Шаг 1. Даты пребывания</legend>
+              <p>Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              <ol class="progress-bar">
+                <li>Даты</li>
+                <li>Маршрут</li>
+                <li>Развлечения</li>
+              </ol>
+              <label for="quantity">Ищу попутчиков:</label>
+              <input id="quantity" type="number" name="quantity" min="1" value="2">
+              <label for="duration">Длительность:</label>
+              <input id="duration" type="number" name="duration" min="1" value="2">
+              <label><input type="checkbox" name="with-children" value="with-children">Можно с детьми</label>
+
+              <table>
+                <thead>
+                    <tr>
+                        <td>&lt;</td>
+                        <th colspan="5">Март 2019</th>
+                        <td>&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>П</td>
+                        <td>В</td>
+                        <td>С</td>
+                        <td>Ч</td>
+                        <td>П</td>
+                        <td>С</td>
+                        <td>В</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>31</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+              </table>
+              <a href="#">Следующий шаг</a>
+            </fieldset>
+
+            <fieldset>
+              <legend>Шаг 2. Маршрут</legend>
+              <p>Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+              <ol class="progress-bar">
+                <li>Даты</li>
+                <li>Маршрут</li>
+                <li>Развлечения</li>
+              </ol>
+              <!-- Сделать два списка??? -->
+              <ul>
+                <li>
+                  <div class="input-group">
+                    <input type="text" placeholder="Выберите страну">
+                    <button>
+                      <span>w</span>
+                    </button>
+                  </div>
+                  <img src="" alt="">
+                  <button class="button__close">
+                    <span>&#10005;</span>
+                  </button>
+                </li>
+                <li>
+              <!-- Инпуту нужно добавить батон который делает ресет -->
+                  <input id="" type="text" name="" placeholder="Выберите страну">
+              <!-- Див отвечающий за выпадающий список стран при вводе, как только полозователь начинает вводить js
+              подхватывает ивент и обновляет таблицу доступных стран -->
+                </li>
+              </ul>
+              <a href="#">На шаг назад</a>
+              <a href="#">Следующий шаг</a>
+            </fieldset>
+
+            <fieldset>
+              <legend>Шаг 3. Развлечения</legend>
+              <p>Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <ol class="progress-bar">
+                <li>Даты</li>
+                <li>Маршрут</li>
+                <li>Развлечения</li>
+              </ol>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
     </main>
 <!-- Изменить футер -->
     <footer class="page-footer">
