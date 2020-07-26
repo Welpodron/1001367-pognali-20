@@ -19,7 +19,8 @@
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp styles",
-    "start": "gulp"
+    "start": "gulp",
+    "git": "git checkout %BRANCH% & git add . & git commit -m \"%BRANCH% была изменена согласно заданию\" & git push -u origin %BRANCH% & start https://github.com/htmlacademy-adaptive/1001367-pognali-20/compare/master...Welpodron:%BRANCH%"
   },
   "browserslist": [
     "last 2 versions",
@@ -31,7 +32,6 @@
     "*.js",
     "source/*.html",
     "source/js/**/*.js",
-    "source/img/**/*.svg",
     "source/less/**/*.less"
   ],
   "engines": {
