@@ -1,0 +1,43 @@
+.form-features__title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  &::after {
+    content: "down";
+  }
+
+  @media (min-width: 768px) {
+    font-weight: @medium;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      content: ":";
+    }
+  }
+
+  @media (min-width: 1440px) {
+    line-height: 22px;
+
+    &::after {
+      content: "down";
+    }
+  }
+}
+
+.form-features__label {
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+
+  @media (min-width: 768px) {
+    font-weight: @medium;
+    font-size: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    //
+  }
+}

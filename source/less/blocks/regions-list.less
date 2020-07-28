@@ -1,0 +1,24 @@
+
+// ТРЕБУЕТ ПЕРЕСМОТРА ЧЕМУ ДАВАТЬ КЛАсС active и куда писать свойства шрифта li или a внутри него!!!!
+.regions-list__link {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: fade(#192144, 30%);
+
+  &--active,
+  &:active {
+    color: #192144;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    //
+  }
+}

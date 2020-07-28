@@ -1,14 +1,32 @@
 .button {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  color: #1d2e5b;
+
+  background-color: #ffd74b;
+  border-radius: 10px;
+
+  &--simple {
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  // Подлежит исправлениям из-за мобильной версии (например кнопка АВТОРИЗАЦИЯ)
   &--round {
+    font-size: 17px;
+    text-align: center;
+    color: #161c35;
+    text-transform: uppercase;
+
     border-radius: 25px;
   }
 
-  &--round-square {
-    border-radius: 10px;
-  }
-
-  &--yellow {
-    background-color: #FFD74B;
+  &--white {
+    background-color: #ffffff;
   }
 
   &--transparent {
@@ -17,12 +35,19 @@
   }
 
   @media (min-width: 768px) {
-    &--round-square {
-      border-radius: 20px;
-    }
-  }
+    font-size: 24px;
 
-  @media (min-width: 1440px) {
-    //
+    border-radius: 20px;
+
+    &--round {
+      font-size: 20px;
+    }
+
+    &--simple {
+      font-size: 20px;
+      line-height: 20px;
+
+      border-radius: 0;
+    }
   }
 }
