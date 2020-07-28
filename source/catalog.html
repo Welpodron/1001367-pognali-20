@@ -54,7 +54,7 @@
         </div>
       </nav>
       <h1>Попутчики</h1>
-      <a href="index.html">На главную</a>
+      <a class="button button--simple" href="index.html">На главную</a>
     </header>
     <main class="page-main">
       <!-- Изменить секцию под сетки -->
@@ -63,692 +63,644 @@
         <div class="filter-countries__wrapper">
           <h2 class="visually-hidden">Подберите идеальную страну</h2>
           <div>
-            <p>Фильтрация по странам</p>
-            <ul>
-              <li>
-                <a href="">Европа</a>
+            <p class="filter-countries__desc">Фильтрация по странам</p>
+            <ul class="regions-list">
+              <li class="regions-list__item">
+                <a class="regions-list__link regions-list__link--active" href="/europe">Европа</a>
               </li>
-              <li>
-                <a href="">Азия</a>
+              <li class="regions-list__item">
+                <a class="regions-list__link" href="/asia">Азия</a>
               </li>
-              <li>
-                <a href="">Америка</a>
+              <li class="regions-list__item">
+                <a class="regions-list__link" href="/america">Америка</a>
               </li>
-              <li>
-                <a href="">Острова</a>
+              <li class="regions-list__item">
+                <a class="regions-list__link" href="/islands">Острова</a>
               </li>
             </ul>
-            <button type="button">Показать все</button>
+            <button class="filter-countries__button" type="button">
+              <span class="filter-countries__button-text button button--simple">Показать все</span>
+            </button>
             <div>
-              <ol>
+              <ol class="countries-list-sorted">
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/Australia">Австралия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/Austria">Австрия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/Azerbaijan">Азербайджан</a>
-                      </li>
-                      <li>
-                        <a href="/europe/Albania">Албания</a>
-                      </li>
-                      <li>
-                        <a href="/europe/Algeria">Алжир</a>
-                      </li>
-                      <li>
-                        <a href="/europe/Angola">Ангола</a>
-                      </li>
-                      <li>
-                        <a href="/europe/Andorra">Андорра</a>
-                      </li>
-                      <li>
-                        <a href="/europe/Antigua and Barbuda">Антигуа и Барбуда</a>
-                      </li>
-                      <li>
-                        <a href="/europe/Argentina">Аргентина</a>
-                      </li>
-                      <li>
-                        <a href="/europe/Armenia">Армения</a>
-                      </li>
-                      <li>
-                        <a href="/europe/Afghanistan">Афганистан</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/Australia">Австралия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/Austria">Австрия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/Azerbaijan">Азербайджан</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/Albania">Албания</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/Algeria">Алжир</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/Angola">Ангола</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/Andorra">Андорра</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/Antigua and Barbuda">Антигуа и Барбуда</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/Argentina">Аргентина</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/Armenia">Армения</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/Afghanistan">Афганистан</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Багамские Острова</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Бангладеш</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Барбадос</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Бахрейн</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Белоруссия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Белиз</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Бельгия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Бенин</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Болгария</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Боливия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Босния и Герцеговина</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Ботсвана</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Бразилия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Бруней</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Буркина-Фасо</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Бурунди</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Бутан</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Багамские Острова</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Бангладеш</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Барбадос</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Бахрейн</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Белоруссия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Белиз</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Бельгия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Бенин</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Болгария</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Боливия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Босния и Герцеговина</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Ботсвана</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Бразилия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Бруней</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Буркина-Фасо</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Бурунди</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Бутан</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Вануату</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Великобритания</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Венгрия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Венесуэла</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Восточный Тимор</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Вьетнам</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Вануату</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Великобритания</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Венгрия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Венесуэла</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Восточный Тимор</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Вьетнам</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Габон</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Гаити</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Гайана</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Гамбия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Гана</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Гватемала</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Гвинея</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Гвинея-Бисау</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Германия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Гондурас</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Гренада</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Греция</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Грузия</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Габон</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Гаити</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Гайана</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Гамбия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Гана</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Гватемала</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Гвинея</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Гвинея-Бисау</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Германия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Гондурас</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Гренада</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Греция</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Грузия</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Дания</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Джибути</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Доминика</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Доминикана</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Дания</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Джибути</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Доминика</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Доминикана</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Египет</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Египет</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Замбия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Зимбабве</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Замбия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Зимбабве</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Израиль</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Индия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Индонезия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Иордания</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Ирак</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Иран</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Ирландия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Исландия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Испания</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Италия</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Израиль</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Индия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Индонезия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Иордания</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Ирак</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Иран</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Ирландия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Исландия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Испания</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Италия</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Кабо-Верде</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Казахстан</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Камбоджа</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Камерун</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Канада</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Катар</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Кения</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Кипр</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Киргизия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Кирибати</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Китай</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Колумбия</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Кабо-Верде</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Казахстан</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Камбоджа</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Камерун</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Канада</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Катар</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Кения</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Кипр</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Киргизия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Кирибати</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Китай</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Колумбия</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Лаос</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Латвия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Лесото</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Либерия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Ливан</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Ливия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Литва</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Лихтенштейн</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Люксембург</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Лаос</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Латвия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Лесото</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Либерия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Ливан</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Ливия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Литва</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Лихтенштейн</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Люксембург</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Маврикий</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Мавритания</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Мадагаскар</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Малави</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Малайзия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Мали</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Мальдивы</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Мальта</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Марокко</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Маврикий</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Мавритания</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Мадагаскар</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Малави</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Малайзия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Мали</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Мальдивы</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Мальта</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Марокко</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Намибия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Науру</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Непал</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Нигер</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Нигерия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Нидерланды</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Никарагуа</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Новая Зеландия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Норвегия</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Намибия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Науру</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Непал</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Нигер</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Нигерия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Нидерланды</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Никарагуа</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Новая Зеландия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Норвегия</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">ОАЭ</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Оман</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">ОАЭ</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Оман</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Пакистан</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Палау</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Панама</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Папуа - Новая Гвинея</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Парагвай</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Перу</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Польша</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Португалия</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Пакистан</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Палау</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Панама</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Папуа - Новая Гвинея</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Парагвай</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Перу</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Польша</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Португалия</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Руанда</a>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                      <li class="countries-list__item">
+                        <a class="countries-list__link" href="/europe/...">Руанда</a>
                       </li>
-                      <li>
-                        <a href="/europe/...">Румыния</a>
+                      <li class="countries-list__item">
+                        <a class="countries-list__link" href="/europe/...">Румыния</a>
                       </li>
-                      <li>
-                        <a href="/europe/...">Россия</a>
+                      <li class="countries-list__item">
+                        <a class="countries-list__link" href="/europe/...">Россия</a>
                       </li>
+                  </ol>
+                </li>
+                <!--  -->
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Сальвадор</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Самоа</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Сан-Марино</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Саудовская Аравия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Сейшелы</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Сенегал</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Сербия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Сингапур</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Сирия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Словакия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Словения</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">США</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Сальвадор</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Самоа</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Сан-Марино</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Саудовская Аравия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Сейшелы</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Сенегал</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Сербия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Сингапур</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Сирия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Словакия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Словения</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">США</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Таджикистан</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Таиланд</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Танзания</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Того</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Тонга</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Тринидад и Тобаго</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Тувалу</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Тунис</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Туркмения</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Турция</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Таджикистан</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Таиланд</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Танзания</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Того</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Тонга</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Тринидад и Тобаго</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Тувалу</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Тунис</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Туркмения</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Турция</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Уганда</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Узбекистан</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Украина</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Уругвай</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Уганда</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Узбекистан</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Украина</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Уругвай</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Фиджи</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Филиппины</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Финляндия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Франция</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Фиджи</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Филиппины</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Финляндия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Франция</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Хорватия</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Хорватия</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Чад</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Черногория</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Чехия</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Чили</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Чад</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Черногория</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Чехия</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Чили</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Швейцария</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Швеция</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Шри-Ланка</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Швейцария</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Швеция</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Шри-Ланка</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Эквадор</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Эритрея</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Эсватини</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Эстония</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Эфиопия</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Эквадор</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Эритрея</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Эсватини</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Эстония</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Эфиопия</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">ЮАР</a>
+                    </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Южный Судан</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">ЮАР</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Южный Судан</a>
-                      </li>
+                <li class="countries-list-sorted__item">
+                  <ol class="countries-list">
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Ямайка</a>
                     </li>
-                  </ol>
-                </li>
-                <!--  -->
-                <li>
-                  <ol>
-                    <li>
-                      <li>
-                        <a href="/europe/...">Ямайка</a>
-                      </li>
-                      <li>
-                        <a href="/europe/...">Япония</a>
-                      </li>
+                    <li class="countries-list__item">
+                      <a class="countries-list__link" href="/europe/...">Япония</a>
                     </li>
                   </ol>
                 </li>
                 <!--  -->
               </ol>
-              <button type="button">
-                <span>Свернуть</span>
+              <button class="filter-countries__button" type="button">
+                <span class="filter-countries__button-text button button--simple">Свернуть</span>
               </button>
             </div>
           </div>
@@ -756,52 +708,53 @@
       </section>
 
       <!-- Добавить названия классов изменить при необходимости -->
-      <section class="filter-features">
+      <section class="page-main__section--yellow filter-features">
         <div class="filter-features__wrapper">
-          <h2 class="title">Подберите идеального попутчика</h2>
-          <form action="#" method="get">
-            <fieldset>
-              <legend>Хобби</legend>
-              <label><input type="checkbox" name="hobby" value="gym">Спортзал</label>
-              <label><input type="checkbox" name="hobby" value="hookah">Кальян</label>
-              <label><input type="checkbox" name="hobby" value="sofa">Диван</label>
+          <h2 class="filter-features__title">Подберите идеального попутчика</h2>
+          <form class="form-features" action="#" method="get">
+            <fieldset class="form-features__section">
+              <legend class="form-features__title">Хобби</legend>
+              <label class="form-features__label"><input type="checkbox" name="hobby" value="gym">Спортзал</label>
+              <label class="form-features__label"><input type="checkbox" name="hobby" value="hookah">Кальян</label>
+              <label class="form-features__label"><input type="checkbox" name="hobby" value="sofa">Диван</label>
             </fieldset>
-            <fieldset>
-              <legend>Музыка</legend>
-              <label><input type="checkbox" name="music" value="hard-rock">Тяжелый рок</label>
-              <label><input type="checkbox" name="music" value="russian-rap">Русский рэп</label>
-              <label><input type="checkbox" name="music" value="evrodens">Евроденс</label>
+            <fieldset class="form-features__section">
+              <legend class="form-features__title">Музыка</legend>
+              <label class="form-features__label"><input type="checkbox" name="music" value="hard-rock">Тяжелый рок</label>
+              <label class="form-features__label"><input type="checkbox" name="music" value="russian-rap">Русский рэп</label>
+              <label class="form-features__label"><input type="checkbox" name="music" value="evrodens">Евроденс</label>
             </fieldset>
-            <fieldset>
-              <legend>Еда</legend>
-              <label><input type="checkbox" name="food" value="meat-eater">Мясоед</label>
-              <label><input type="checkbox" name="food" value="proper-diet">Сидит на ПП</label>
-              <label><input type="checkbox" name="food" value="raw-food-vegan">Веган-сыроед</label>
+            <fieldset class="form-features__section">
+              <legend class="form-features__title">Еда</legend>
+              <label class="form-features__label"><input type="checkbox" name="food" value="meat-eater">Мясоед</label>
+              <label class="form-features__label"><input type="checkbox" name="food" value="proper-diet">Сидит на ПП</label>
+              <label class="form-features__label"><input type="checkbox" name="food" value="raw-food-vegan">Веган-сыроед</label>
             </fieldset>
-            <fieldset>
-              <legend>Транспорт</legend>
-              <label><input type="checkbox" name="transport" value="air-flight">Авиаперелет</label>
-              <label><input type="checkbox" name="transport" value="vehicle">Автотранспорт</label>
-              <label><input type="checkbox" name="transport" value="bicycle">Велосипед</label>
-              <label><input type="checkbox" name="transport" value="on-foot">Пешком</label>
+            <fieldset class="form-features__section">
+              <legend class="form-features__title">Транспорт</legend>
+              <label class="form-features__label"><input type="checkbox" name="transport" value="air-flight">Авиаперелет</label>
+              <label class="form-features__label"><input type="checkbox" name="transport" value="vehicle">Автотранспорт</label>
+              <label class="form-features__label"><input type="checkbox" name="transport" value="bicycle">Велосипед</label>
+              <label class="form-features__label"><input type="checkbox" name="transport" value="on-foot">Пешком</label>
             </fieldset>
-            <fieldset>
-              <legend>Левел</legend>
-              <label for="first">от</label>
-              <input id="first" type="text" value="30">
-              <label for="second">до</label>
-              <input id="second" type="text" value="100">
+            <fieldset class="form-features__section">
+              <legend class="form-features__title">Левел</legend>
+              <label class="visually-hidden" for="first">от</label>
+              <input id="first" type="number" value="30">
+              <label class="visually-hidden" for="second">до</label>
+              <input id="second" type="number" value="100">
               <div class="slider-range">
                 <span></span>
                 <div class="slider-range__active-bar"></div>
                 <span></span>
               </div>
             </fieldset>
-            <input type="submit" value="Показать">
+            <input class="button button--round button--white" type="submit" value="Показать">
           </form>
         </div>
       </section>
 
+      <!-- ТРЕБУЕТ ПЕРЕСМОТРА -->
       <section class="companions">
         <div class="companions__wrapper">
           <!-- Изменить названия классов !!!! потому что они повторяются как на основной так и на этой странице -->
@@ -905,30 +858,26 @@
               <a class="users-list__button js-user-modal button button--round" href="#">Позвать!</a>
             </li>
           </ul>
-            <a class="js-show-more" href="#">показать еще</a>
+            <a class="button button--simple js-show-more" href="#">показать еще</a>
             <div class="pagination">
-              <ol class="pagination__list pages-list">
-                <li class="pages-list__item">
-                  <a class="pages-list__link pages-list__link--current" href="#">1</a>
+              <ol class="pagination__list">
+                <li class="pagination__item">
+                  <a class="pagination__link pagination__link--current" href="#">1</a>
                 </li>
-                <li class="pages-list__item">
-                  <a class="pages-list__link" href="#">2</a>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">2</a>
                 </li>
-                <li class="pages-list__item">
-                  <a class="pages-list__link" href="#">3</a>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">3</a>
                 </li>
-                <li class="pages-list__item">
-                  <a class="pages-list__link" href="#">4</a>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">4</a>
                 </li>
               </ol>
-              <ul class="pagination__list pages-toggles-list">
-                <li class="pages-toggles-list__item">
-                  <a class="pages-toggles-list__link-prev" href="#">Показать предыдущую страницу</a>
-                </li>
-                <li class="pages-toggles-list__item">
-                  <a class="pages-toggles-list__link-next" href="#">Показать следующую страницу</a>
-                </li>
-              </ul>
+              <div class="pagination__toggles">
+                <a class="pagination__link-prev" href="#">Показать предыдущую страницу</a>
+                <a class="pagination__link-next" href="#">Показать следующую страницу</a>
+              </div>
             </div>
           </div>
         </section>

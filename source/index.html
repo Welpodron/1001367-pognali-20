@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +15,9 @@
     <link rel="preload" as="font" href="fonts/bloggersans-bolditalic.woff2" type="font/woff2" crossorigin="anonymous">
   </head>
   <body>
+
     <header class="page-header">
-      <a class="page-header__logo" href="#">
+      <a class="page-header__logo logo" href="#">
         <img src="https://via.placeholder.com/150x150" alt="">
       </a>
       <nav class="main-nav">
@@ -24,7 +25,7 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <ul class="site-list">
             <li class="site-list__item">
               <a class="site-list__link site-list__link--active" href="#">О сервисе</a>
             </li>
@@ -35,20 +36,20 @@
               <a class="site-list__link" href="catalog.html">Попутчики</a>
             </li>
           </ul>
-          <ul class="main-nav__list user-list">
+          <ul class="main-nav__user-list user-list">
             <li class="user-list__item">
-              <a class="user-list__button js-login button button--round button--yellow" href="login.html">Авторизация</a>
+              <a class="user-list__button js-login button button--round" href="login.html">Авторизация</a>
             </li>
           </ul>
-          <ul class="main-nav__list contacts-list">
-            <li class="contacts-list__item">
-              <a class="contacts-list__link" href="tel:+88005558628">8 800 555-86-28</a>
+          <ul class="main-nav__contact-list contact-list">
+            <li class="contact-list__item">
+              <a class="contact-list__link" href="tel:+88005558628">8 800 555-86-28</a>
             </li>
-            <li class="contacts-list__item">
-              <a class="contacts-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <li class="contact-list__item">
+              <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
           </ul>
-          <ul class="main-nav__list main-nav__socials socials-list">
+          <ul class="main-nav__socials socials-list">
             <li class="socials-list__item">
               <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
             </li>
@@ -62,112 +63,108 @@
         </div>
       </nav>
     </header>
+
     <main class="page-main">
       <h1 class="visually-hidden">Сайт для настоящих путешественников: Погнали</h1>
-      <!-- Изменить блок промо -->
-      <section class="promo">
+      <!-- ПЕРЕСМОТРЕТЬ НАЗВАНИЯ КЛАССОВ СЕКЦИЙ ЗАДАТЬ КАКИЕ-НИБУДЬ ПАРАМЕТРЫ ПО УМОЛЧАНИЮ -->
+      <section class="page-main__section page-main__section--dark promo">
         <h2 class="visually-hidden">Промо</h2>
         <div class="promo__wrapper">
           <b class="promo__slogan">В путешествие с крутыми попутчиками!</b>
           <img src="https://via.placeholder.com/150x150" alt="">
-          <div class="promo__nav-list">
-            <!-- Изменить для бэма -->
-            <ul class="promo__nav-list__item user-list">
+          <div class="promo__nav">
+            <ul class="promo__user-list user-list">
               <li class="user-list__item">
                 <a class="user-list__button js-login button button--round button--yellow" href="login.html">Авторизация</a>
               </li>
             </ul>
-            <!-- Изменить для бэма -->
-            <ul class="promo__nav-list__item contacts-list">
-              <li class="contacts-list__item">
-                <a class="contacts-list__link" href="tel:+88005558628">8 800 555-86-28</a>
+            <ul class="promo__contact-list contact-list">
+              <li class="contact-list__item">
+                <a class="contact-list__link" href="tel:+88005558628">8 800 555-86-28</a>
               </li>
-              <li class="contacts-list__item">
-                <a class="contacts-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <li class="contact-list__item">
+                <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </li>
             </ul>
           </div>
           <blockquote class="promo__blockquote">
-            <p class="promo__blockquote-quote"><q>Лучшее приложение, что я видел в жизни!</q></p>
-            <cite class="promo__blockquote-author">Мурат Эльтазин главный редактор газеты <q>гаджетлайф</q></cite>
+            <p class="promo__quote"><q>Лучшее приложение, что я видел в жизни!</q></p>
+            <cite class="promo__author">Мурат Эльтазин главный редактор газеты <q>гаджетлайф</q></cite>
           </blockquote>
-          <!-- Возможно потребуюстя изменения в названии класса -->
-          <ol class="promo__list steps-list">
-            <!-- Возможно потребуются изменения в модификаторах класса -->
-            <li class="steps-list__item steps-list__item--special-orange">Выберите направление</li>
-            <li class="steps-list__item steps-list__item--orange">Изучите идеи путешественников</li>
-            <li class="steps-list__item steps-list__item--special-yellow-dark ">Находите тех, кто похож на вас</li>
-            <li class="steps-list__item steps-list__item--basic-yellow">Путешествуйте вместе!</li>
+          <ol class="promo__steps-list">
+            <li class="promo__item promo__item--special-orange">Выберите направление</li>
+            <li class="promo__item promo__item--orange">Изучите идеи путешественников</li>
+            <li class="promo__item promo__item--special-yellow-dark ">Находите тех, кто похож на вас</li>
+            <li class="promo__item promo__item--basic-yellow">Путешествуйте вместе!</li>
           </ol>
         </div>
       </section>
 
-      <!-- Изменить блок о сервисе -->
-      <section class="about">
+      <section class="page-main__section page-main__section--dark about">
         <div class="about__wrapper">
           <h2 class="title">О сервисе</h2>
-          <p class="about__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-          <b class="about__slogan">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b>
-          <a class="button button--round-square button--yellow" href="#">
-            <span>Подробнее</span>
+          <p class="subtitle">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+          <b class="slogan">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b>
+          <a class="button" href="#">
+            <span class="button__text">Подробнее</span>
           </a>
         </div>
       </section>
 
-      <!-- Изменить блок направлений (пс точно понадобится врапер) -->
-      <section class="directions">
-        <div class="directions__wrapper">
+      <!-- ВНИМАНИЕ У МНОГИХ КНОПОК МОЖНО УБРАТЬ СПАНЫ!!!!!!!! -->
+      <section class="page-main__section routes">
+        <div class="routes__wrapper">
           <h2 class="title">Направления</h2>
-          <p class="directions__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
-          <ul class="directions__list countries-list">
-            <li class="countries-list__item">
+          <p class="subtitle">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+          <ul class="routes__list">
+            <li class="routes__item">
               <img src="https://via.placeholder.com/150x150" alt="">
-              <div class="countries-list__container">
-                <div class="countries-list__description">
-                  <h3 class="countries-list__country-name">Таиланд</h3>
-                  <b class="countries-list__slogan">Джунгли зовут!</b>
+              <div class="routes__container">
+                <div class="routes__desc">
+                  <h3 class="routes__name">Таиланд</h3>
+                  <b class="routes__slogan">Джунгли зовут!</b>
                 </div>
-                <span class="countries-list__counter">18321</span>
+                <span class="routes__counter">18321</span>
               </div>
             </li>
-            <li class="countries-list__item">
+            <li class="routes__item">
               <img src="https://via.placeholder.com/150x150" alt="">
-              <div class="countries-list__container">
-                <div class="countries-list__description">
-                  <h3 class="countries-list__country-name">Франция</h3>
-                  <b class="countries-list__slogan">Трэ бьен, манифик!</b>
+              <div class="routes__container">
+                <div class="routes__desc">
+                  <h3 class="routes__name">Франция</h3>
+                  <b class="routes__slogan">Трэ бьен, манифик!</b>
                 </div>
-                <span class="countries-list__counter">12518</span>
+                <span class="routes__counter">12518</span>
               </div>
             </li>
-            <li class="countries-list__item">
+            <li class="routes__item">
               <img src="https://via.placeholder.com/150x150" alt="">
-              <div class="countries-list__container">
-                <div class="countries-list__description">
-                  <h3 class="countries-list__country-name">Чехия</h3>
-                  <b class="countries-list__slogan">Закоулки старой Европы</b>
+              <div class="routes__container">
+                <div class="routes__desc">
+                  <h3 class="routes__name">Чехия</h3>
+                  <b class="routes__slogan">Закоулки старой Европы</b>
                 </div>
-                <span class="countries-list__counter">5326</span>
+                <span class="routes__counter">5326</span>
               </div>
             </li>
           </ul>
-          <a class="button button--round-square button--yellow" href="#">
-            <span>Показать все</span>
+          <a class="button" href="#">
+            <span class="button__text">Показать все</span>
           </a>
         </div>
       </section>
 
       <!-- Изменить блок попутчиков (пс точно понадобится врапер) -->
-      <section class="users">
-        <div class="users__wrapper">
+      <section class="page-main__section page-main__section--dark companions">
+        <div class="companions__wrapper">
           <h2 class="title">Попутчики</h2>
-          <p class="users__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <b class="users__slogan">Теперь можно легко найти единомышленников!</b>
-          <ul class="users__list companions-list">
-            <li class="companions-list__item">
+          <p class="subtitle">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <b class="slogan">Теперь можно легко найти единомышленников!</b>
+          <ul class="companions__list">
+            <li class="companions__item">
               <img src="https://via.placeholder.com/150x150" alt="">
               <!-- Добавить уровень  -->
-              <div class="companions-list__container">
+              <div class="companions__container">
                 <ul class="flags-list">
                   <li class="flags-list__item flags-list__item--sri-lanka">
                     <span class="tooltip">Шри-ланка</span>
@@ -179,10 +176,10 @@
                     <span class="tooltip">Сейшелы</span>
                   </li>
                 </ul>
-                <a class="companions-list__link" href="#">
-                  <h3 class="companions-list__user companions-list__user--offline">Таня Фирсова</h3>
+                <a class="user-link" href="#">
+                  <h3 class="user-link__user user-link__user--offline">Таня Фирсова</h3>
                 </a>
-                <p class="companions-list__hashtag-list">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                <p class="hashtags-list">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 <ul class="transport-list">
                   <li class="transport-list__item transport-list__item--available transport-list__item--air-flight">
                     <span class="tooltip">Авиаперелет</span>
@@ -199,10 +196,10 @@
                 </ul>
               </div>
             </li>
-            <li class="companions-list__item">
+            <li class="companions__item">
               <img src="https://via.placeholder.com/150x150" alt="">
               <!-- Добавить уровень  -->
-              <div class="companions-list__container">
+              <div class="companions__container">
                 <ul class="flags-list">
                   <li class="flags-list__item flags-list__item--belgium">
                     <span class="tooltip">Бельгия</span>
@@ -211,10 +208,10 @@
                     <span class="tooltip">Чехия</span>
                   </li>
                 </ul>
-                <a class="companions-list__link" href="#">
-                  <h3 class="companions-list__user companions-list__user--online">Петя Демин</h3>
+                <a class="user-link" href="#">
+                  <h3 class="user-link__user user-link__user--online">Петя Демин</h3>
                 </a>
-                <p class="companions-list__hashtag-list">#бургер #бар #футбол #концерт #крафт</p>
+                <p class="hashtags-list">#бургер #бар #футбол #концерт #крафт</p>
                 <ul class="transport-list">
                   <li class="transport-list__item transport-list__item--available transport-list__item--air-flight">
                     <span class="tooltip">Авиаперелет</span>
@@ -232,17 +229,17 @@
               </div>
             </li>
           </ul>
-          <a class="button button--round-square button--yellow" href="#">
-            <span>Показать всех</span>
+          <a class="button" href="#">
+            <span class="button__text">Показать всех</span>
           </a>
         </div>
       </section>
 
       <!-- Изменить блок профиля ?? отсутсвует декор элемент Изменить классы -->
-      <section class="profile-types">
+      <section class="page-main__section profile-types">
         <div class="profile-types__wrapper">
-          <h2 class="profile-types__title title">Добавьте свой профиль</h2>
-          <dl class="profile-types__list rates-list">
+          <h2 class="title">Добавьте свой профиль</h2>
+          <dl class="rates-list">
             <div class="rates-list__item">
               <dt class="rates-list__feature">Базовое размещение</dt>
               <dd class="rates-list__price">Бесплатно</dd>
@@ -258,9 +255,9 @@
           </dl>
           <a class="profile-types__link js-modal-profile-types" href="#">Показать тарифы для бизнеса</a>
           <!-- Или же в названии классов можно обойтись модификатором?? -->
-          <div class="profile-types__modal modal-profile-business-types">
-            <h3 class="modal-profile-business-types__title title">Бизнес-тарифы</h3>
-            <dl class="modal-profile-business-types__list business-rates-list">
+          <div class="profile-types__modal business-types">
+            <h3 class="title">Бизнес-тарифы</h3>
+            <dl class="business-rates-list">
               <div class="business-rates-list__item">
                 <dt class="business-rates-list__feature">Реклама у блоггера</dt>
                 <dd class="business-rates-list__price">300 000 руб./пост</dd>
@@ -278,52 +275,52 @@
                 <dd class="business-rates-list__price">Индивидуально</dd>
               </div>
             </dl>
-            <button class="modal-profile-business-types__button js-menu-toggle" type="button">Закрыть окно</button>
+            <button class="business-types__button js-menu-toggle" type="button">Закрыть окно</button>
           </div>
         </div>
       </section>
-<!-- Блок требует изменений и классов -->
-        <section class="feedback">
-          <div class="feedback__wrapper">
-            <h2 class="title">Заинтересовались?</h2>
-            <p class="feedback__description">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
-            <form class="feedback__form email-form" action="#" method="POST">
-              <input class="email-form__input" type="email" placeholder="E-mail">
-              <button class="email-form__submit" type="submit">
-                <span class="email-form__submit-text">Регистрация</span>
-              </button>
-            </form>
-            <p class="feedback__contact">Остались вопросы? Мы с радостью на них ответим!</p>
-            <ul class="feedback__list contacts-list">
-              <li class="contacts-list__item">
-                <a class="contacts-list__link contacts-list__link--yellow" href="tel:+88005558628">8 800 555-86-28</a>
-              </li>
-              <li class="contacts-list__item">
-                <a class="contacts-list__link contacts-list__link--yellow" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-              </li>
-            </ul>
-          </div>
-        </section>
 
-        <section class="contact-address">
-          <div class="contact-address__wrapper">
-            <h2 class="visually-hidden">Контактный адрес</h2>
-            <address class="contact-address__address">ул. Большая Конюшенная, 19/8</address>
-            <a class="button button--round-square button--transparent" href="#">
-              <span>Проложить маршрут</span>
-            </a>
-            <iframe class="contact-address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.730413298935!2d30.321083488257898!3d59.93608393541578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631057d105877%3A0x91c16b0cf63dfa74!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsA!5e0!3m2!1sru!2sru!4v1595592147810!5m2!1sru!2sru&zoom=0" width="320" height="424" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          </div>
-        </section>
+      <section class="page-main__section page-main__section--dark register">
+        <div class="register__wrapper">
+          <h2 class="title">Заинтересовались?</h2>
+          <p class="subtitle">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="register__link" href="#">авторизуйтесь</a>.</p>
+          <form class="register__form" action="#" method="POST">
+            <input class="register__input" type="email" placeholder="E-mail">
+            <button class="register__submit button" type="submit">
+              <span class="button__text">Регистрация</span>
+            </button>
+          </form>
+          <p class="subtitle">Остались вопросы? Мы с радостью на них ответим!</p>
+          <ul class="register__contact-list contact-list">
+            <li class="contact-list__item">
+              <a class="contact-list__link" href="tel:+88005558628">8 800 555-86-28</a>
+            </li>
+            <li class="contact-list__item">
+              <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="page-main__section page-main__section--yellow contact-address">
+        <div class="contact-address__wrapper">
+          <h2 class="visually-hidden">Контактный адрес</h2>
+          <address class="contact-address__address">ул. Большая Конюшенная, 19/8</address>
+          <a class="button button--transparent" href="#">
+            <span class="button__text">Проложить маршрут</span>
+          </a>
+          <iframe class="contact-address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1097.730413298935!2d30.321083488257898!3d59.93608393541578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631057d105877%3A0x91c16b0cf63dfa74!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsA!5e0!3m2!1sru!2sru!4v1595592147810!5m2!1sru!2sru&zoom=0" width="320" height="424" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </section>
     </main>
 
 <!-- Изменить футер -->
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo" href="#">
+        <a class="page-footer__logo logo" href="#">
           <img src="https://via.placeholder.com/150x150" alt="">
         </a>
-        <ul class="page-footer__list page-footer__socials socials-list">
+        <ul class="page-footer__socials socials-list">
           <li class="socials-list__item">
             <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
           </li>

@@ -1,0 +1,57 @@
+.my-plans__route {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    text-align: left;
+  }
+
+  @media (min-width: 1440px) {
+    //
+  }
+}
+
+// Пересмотреть возможность написать на всего лишь 1 li вместо 3 классов через запятую
+
+.my-plans__companions,
+.my-plans__time,
+.my-plans__link {
+  font-weight: @medium;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    text-align: left;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: 1440px) {
+    letter-spacing: 0.09em;
+  }
+}
+
+.my-plans__time {
+  @media (min-width: 768px) {
+    letter-spacing: 0.06em;
+  }
+
+  @media (min-width: 1440px) {
+    letter-spacing: 0.06em;
+  }
+}
+
+.my-plans__link {
+  color: fade(#000000, 30%);
+  letter-spacing: 0.03em;
+
+  @media (min-width: 1440px) {
+    letter-spacing: 0.08em;
+  }
+}
