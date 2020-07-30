@@ -1,32 +1,59 @@
 .form-plans__section {
   margin: 0;
+  margin-bottom: 10px;
   padding: 25px;
 
   background-color: #ffffff;
   border: none;
   border-radius: 10px;
-  margin-bottom: 10px;
 
   &:last-of-type {
     margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 45px;
+
+    border-radius: 30px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 160px;
+
+    border-radius: 60px;
   }
 }
 
 .form-plans__title {
   // fix wierd position
   float: left;
+
   font-weight: bold;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 1;
   color: #1d2e5b;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+  }
 }
 
 .form-plans__progress-bar {
   display: none;
+
+  @media (min-width: 1440px) {
+    display: block;
+  }
 }
 
 .form-plans__desc {
   clear: both;
+
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
