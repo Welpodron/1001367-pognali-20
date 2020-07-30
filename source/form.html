@@ -8,57 +8,65 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo" href="#">
-        <img src="https://via.placeholder.com/150x150" alt="">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle js-menu-toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="index.html">О сервисе</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Направления</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Попутчики</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__login js-login button button--round" href="login.html">Авторизация</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list contacts-list">
-            <li class="contacts-list__item">
-              <a href="tel:+88005558628">8 800 555-86-28</a>
-            </li>
-            <li class="contacts-list__item">
-              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list main-nav__socials socials-list">
-            <li class="socials-list__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-            </li>
-            <li class="socials-list__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-            </li>
-            <li class="socials-list__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-            </li>
-          </ul>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo logo" href="#">
+          <img src="https://via.placeholder.com/150x150" alt="">
+        </a>
+        <nav class="page-header__nav main-nav">
+          <button class="main-nav__toggle js-menu-toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__site-list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--active" href="#">О сервисе</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Направления</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">Попутчики</a>
+              </li>
+            </ul>
+            <div class="main-nav__additional-list">
+              <ul class="main-nav__user-list user-list">
+                <li class="user-list__item">
+                  <a class="user-list__button js-login button button--round" href="login.html">Авторизация</a>
+                </li>
+              </ul>
+              <ul class="main-nav__contact-list contact-list">
+                <li class="contact-list__item">
+                  <a class="contact-list__link" href="tel:+88005558628">8 800 555-86-28</a>
+                </li>
+                <li class="contact-list__item">
+                  <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                </li>
+              </ul>
+            </div>
+            <ul class="main-nav__socials socials-list">
+              <li class="socials-list__item">
+                <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+              </li>
+              <li class="socials-list__item">
+                <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              </li>
+              <li class="socials-list__item">
+                <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="page-header__footer">
+          <h1 class="header__title">Направления</h1>
         </div>
-      </nav>
+      </div>
     </header>
+
     <main class="page-main">
 
       <section class="my-plans">
         <div class="my-plans__wrapper">
-          <h2 class="title title--medium">Мои планы:</h2>
+          <h2 class="my-plans__title">Мои планы:</h2>
           <ol class="my-plans__list">
             <li class="my-plans__item">
               <p class="my-plans__route">Франция, Италия</p>
@@ -85,11 +93,11 @@
             <li>Развлечения</li>
           </ol>
 
-          <form action="">
-            <fieldset>
-              <legend>Шаг 1. Даты пребывания</legend>
-              <p>Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-              <ol class="progress-bar">
+          <form class="form-plans" action="">
+            <fieldset class="form-plans__section">
+              <legend class="form-plans__title">Шаг 1. Даты пребывания</legend>
+              <p class="form-plans__desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              <ol class="form-plans__progress-bar progress-bar">
                 <li>Даты</li>
                 <li>Маршрут</li>
                 <li>Развлечения</li>
@@ -100,87 +108,87 @@
               <input id="duration" type="number" name="duration" min="1" value="2">
               <label><input type="checkbox" name="with-children" value="with-children">Можно с детьми</label>
 
-              <table>
-                <thead>
-                    <tr>
+              <table class="calendar">
+                <thead class="calendar__header">
+                    <tr class="calendar__header-row">
                         <td>&lt;</td>
                         <th colspan="5">Март 2019</th>
                         <td>&gt;</td>
                     </tr>
-                    <tr>
-                        <td>П</td>
-                        <td>В</td>
-                        <td>С</td>
-                        <td>Ч</td>
-                        <td>П</td>
-                        <td>С</td>
-                        <td>В</td>
+                    <tr class="calendar__header-row">
+                        <td class="calendar__cell">П</td>
+                        <td class="calendar__cell">В</td>
+                        <td class="calendar__cell">С</td>
+                        <td class="calendar__cell">Ч</td>
+                        <td class="calendar__cell">П</td>
+                        <td class="calendar__cell">С</td>
+                        <td class="calendar__cell">В</td>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>23</td>
-                        <td>24</td>
-                        <td>25</td>
-                        <td>26</td>
-                        <td>27</td>
-                        <td>28</td>
-                        <td>1</td>
+                <tbody class="calendar__body">
+                    <tr class="calendar__body-row">
+                        <td class="calendar__cell">23</td>
+                        <td class="calendar__cell">24</td>
+                        <td class="calendar__cell">25</td>
+                        <td class="calendar__cell">26</td>
+                        <td class="calendar__cell">27</td>
+                        <td class="calendar__cell">28</td>
+                        <td class="calendar__cell">1</td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
+                    <tr class="calendar__body-row">
+                        <td class="calendar__cell">2</td>
+                        <td class="calendar__cell">3</td>
+                        <td class="calendar__cell">4</td>
+                        <td class="calendar__cell">5</td>
+                        <td class="calendar__cell">6</td>
+                        <td class="calendar__cell">7</td>
+                        <td class="calendar__cell">8</td>
                     </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                        <td>13</td>
-                        <td>14</td>
-                        <td>15</td>
+                    <tr class="calendar__body-row">
+                        <td class="calendar__cell">9</td>
+                        <td class="calendar__cell">10</td>
+                        <td class="calendar__cell">11</td>
+                        <td class="calendar__cell">12</td>
+                        <td class="calendar__cell">13</td>
+                        <td class="calendar__cell">14</td>
+                        <td class="calendar__cell">15</td>
                     </tr>
-                    <tr>
-                        <td>16</td>
-                        <td>17</td>
-                        <td>18</td>
-                        <td>19</td>
-                        <td>20</td>
-                        <td>21</td>
-                        <td>22</td>
+                    <tr class="calendar__body-row">
+                        <td class="calendar__cell">16</td>
+                        <td class="calendar__cell">17</td>
+                        <td class="calendar__cell">18</td>
+                        <td class="calendar__cell">19</td>
+                        <td class="calendar__cell">20</td>
+                        <td class="calendar__cell">21</td>
+                        <td class="calendar__cell">22</td>
                     </tr>
-                    <tr>
-                        <td>23</td>
-                        <td>24</td>
-                        <td>25</td>
-                        <td>26</td>
-                        <td>27</td>
-                        <td>28</td>
-                        <td>29</td>
+                    <tr class="calendar__body-row">
+                        <td class="calendar__cell">23</td>
+                        <td class="calendar__cell">24</td>
+                        <td class="calendar__cell">25</td>
+                        <td class="calendar__cell">26</td>
+                        <td class="calendar__cell">27</td>
+                        <td class="calendar__cell">28</td>
+                        <td class="calendar__cell">29</td>
                     </tr>
-                    <tr>
-                        <td>30</td>
-                        <td>31</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
+                    <tr class="calendar__body-row">
+                        <td class="calendar__cell">30</td>
+                        <td class="calendar__cell">31</td>
+                        <td class="calendar__cell">1</td>
+                        <td class="calendar__cell">2</td>
+                        <td class="calendar__cell">3</td>
+                        <td class="calendar__cell">4</td>
+                        <td class="calendar__cell">5</td>
                     </tr>
                 </tbody>
               </table>
               <a href="#">Следующий шаг</a>
             </fieldset>
 
-            <fieldset>
-              <legend>Шаг 2. Маршрут</legend>
-              <p>Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
-              <ol class="progress-bar">
+            <fieldset class="form-plans__section">
+              <legend class="form-plans__title">Шаг 2. Маршрут</legend>
+              <p class="form-plans__desc">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+              <ol class="form-plans__progress-bar progress-bar">
                 <li>Даты</li>
                 <li>Маршрут</li>
                 <li>Развлечения</li>
@@ -210,14 +218,26 @@
               <a href="#">Следующий шаг</a>
             </fieldset>
 
-            <fieldset>
-              <legend>Шаг 3. Развлечения</legend>
-              <p>Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-              <ol class="progress-bar">
+            <fieldset class="form-plans__section">
+              <legend class="form-plans__title">Шаг 3. Развлечения</legend>
+              <p class="form-plans__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <ol class="form-plans__progress-bar progress-bar">
                 <li>Даты</li>
                 <li>Маршрут</li>
                 <li>Развлечения</li>
               </ol>
+              <ul class="selected-countries-list">
+                <li class="selected-countries-list__item">
+                  <p class="selected-countries-list__name">Босния и Герцеговина</p>
+                  <textarea class="selected-countries-list__text-area" placeholder="План действий"></textarea>
+                </li>
+                <li class="selected-countries-list__item">
+                  <p class="selected-countries-list__name">Чехия</p>
+                  <textarea class="selected-countries-list__text-area" placeholder="План действий"></textarea>
+                </li>
+              </ul>
+              <a href="#">На шаг назад</a>
+              <input type="submit" value="отправить">
             </fieldset>
           </form>
         </div>

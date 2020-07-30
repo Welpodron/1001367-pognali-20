@@ -2,11 +2,9 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 1;
-  text-align: center;
-
+  margin: 0;
   @media (min-width: 768px) {
     font-size: 24px;
-    text-align: left;
   }
 
   @media (min-width: 1440px) {
@@ -14,7 +12,33 @@
   }
 }
 
+.my-plans {
+  padding: 0 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #dfe3f0;
+}
+
+.my-plans__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.my-plans__item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 // Пересмотреть возможность написать на всего лишь 1 li вместо 3 классов через запятую
+// .div:lst
 
 .my-plans__companions,
 .my-plans__time,
@@ -22,13 +46,11 @@
   font-weight: @medium;
   font-size: 14px;
   line-height: 14px;
-  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 
   @media (min-width: 768px) {
     font-size: 20px;
-    text-align: left;
     letter-spacing: 0.1em;
   }
 

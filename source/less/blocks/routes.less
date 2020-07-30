@@ -1,7 +1,7 @@
 .routes__name {
-  color: #000000;
   font-size: 21px;
   line-height: 1;
+  color: #000000;
 
   @media (min-width: 768px) {
     font-size: 24px;
@@ -32,7 +32,7 @@
   font-weight: @medium;
   font-size: 16px;
   line-height: 20px;
-  color: fade(#161C35, 30%);
+  color: fade(#161c35, 30%);
 
   @media (min-width: 768px) {
     font-size: 20px;
@@ -41,4 +41,115 @@
   @media (min-width: 1440px) {
     //
   }
+}
+
+.routes {
+  outline: 5px solid fade(blue, 50%);
+  padding: 0 25px;
+
+  @media (min-width: 768px) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 60px;
+  }
+}
+
+.routes__wrapper {
+  outline: 5px solid fade(blue, 50%);
+  // возможно понадобиться переделать для планшета
+  @media (min-width: 768px) {
+    padding: 0 36px;
+  }
+  // Убрать падинги у враппера добавить их всем секциям оставить только падинг слева !!!
+  @media (min-width: 1440px) {
+    display: grid;
+    padding: 0 70px;
+
+    column-gap: 60px;
+
+    grid-template-areas: "routes__list routes__list routes__header routes__header" "routes__list routes__list routes__button routes__button";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+  }
+}
+
+.routes__header {
+  outline: 5px solid fade(green, 50%);
+  outline-offset: -5px;
+  @media (min-width: 1440px) {
+    padding-left: 110px;
+
+    grid-area: routes__header;
+  }
+}
+
+.routes__list {
+  display: grid;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
+  list-style: none;
+
+  outline: 5px solid fade(green, 50%);
+  outline-offset: -5px;
+
+  grid-template-rows: repeat(3, auto);
+  row-gap: 10px;
+
+  @media (min-width: 1440px) {
+    margin-bottom: 0;
+
+    grid-area: routes__list;
+  }
+}
+
+.routes__item {
+  outline: 5px solid fade(red, 50%);
+  outline-offset: -5px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.routes__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding: 0 25px;
+
+  background-color: #ffffff;
+
+  @media (min-width: 768px) {
+    flex-basis: 430px;
+    flex-direction: column;
+  }
+}
+
+.routes img {
+  display: block;
+  width: 100%;
+}
+
+// Возможно потребуется замена!!
+// Потому что кнопки подстраиваются под ширину контента !!!!!!!!!!
+.routes__button {
+  display: block;
+
+  outline: 5px solid fade(green, 50%);
+  outline-offset: -5px;
+
+  @media (min-width: 1440px) {
+    padding-left: 110px;
+
+    grid-area: routes__button;
+  }
+}
+
+.routes__name {
+  margin: 0;
 }
