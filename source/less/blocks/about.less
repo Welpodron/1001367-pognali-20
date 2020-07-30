@@ -26,3 +26,46 @@
     line-height: 24px;
   }
 }
+
+// ПАДДИНГИ ДЛЯ СЕКЦИЙ МОЖНО БУДЕТ ВЫНЕСТИ КАЖДОЙ СЕКЦИИ В PAGE MAIN
+
+.about {
+  outline: 5px solid fade(blue, 50%);
+  padding: 0 25px;
+
+  @media (min-width: 768px) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 60px;
+  }
+}
+
+.about__wrapper {
+  outline: 5px solid fade(blue, 50%);
+
+  @media (min-width: 768px) {
+    padding: 0 36px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 70px;
+  }
+}
+
+.about__header {
+  padding: 0 25px;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+}
+
+.about__button {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+}

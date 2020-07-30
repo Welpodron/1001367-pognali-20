@@ -1,3 +1,11 @@
+.filter-countries {
+  padding: 0 25px;
+
+  @media (min-width: 768px) {
+    padding: 0 40px;
+  }
+}
+
 .filter-countries__desc {
   font-weight: bold;
   font-size: 16px;
@@ -13,4 +21,9 @@
     font-size: 20px;
     line-height: 20px;
   }
+}
+
+// ИЗМЕНИТЬ !
+body > main > section.catalog-grid__filter-countries.filter-countries > div > div > div {
+  display: none;
 }

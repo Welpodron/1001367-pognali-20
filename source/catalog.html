@@ -1,65 +1,73 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body class="page__body">
+  <body>
+
     <header class="page-header">
-      <a class="page-header__logo" href="#">
-        <img src="https://via.placeholder.com/150x150" alt="">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle js-menu-toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">О сервисе</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link " href="form.html">Направления</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--active" href="#">Попутчики</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__button js-login button button--round" href="login.html">Авторизация</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list contacts-list">
-            <li class="contacts-list__item">
-              <a href="tel:+88005558628">8 800 555-86-28</a>
-            </li>
-            <li class="contacts-list__item">
-              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list main-nav__socials socials-list">
-            <li class="socials-list__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-            </li>
-            <li class="socials-list__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-            </li>
-            <li class="socials-list__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-            </li>
-          </ul>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo logo" href="#">
+          <img src="https://via.placeholder.com/150x150" alt="">
+        </a>
+        <nav class="page-header__nav main-nav">
+          <button class="main-nav__toggle js-menu-toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__site-list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--active" href="#">О сервисе</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Направления</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">Попутчики</a>
+              </li>
+            </ul>
+            <div class="main-nav__additional-list">
+              <ul class="main-nav__user-list user-list">
+                <li class="user-list__item">
+                  <a class="user-list__button js-login button button--round" href="login.html">Авторизация</a>
+                </li>
+              </ul>
+              <ul class="main-nav__contact-list contact-list">
+                <li class="contact-list__item">
+                  <a class="contact-list__link" href="tel:+88005558628">8 800 555-86-28</a>
+                </li>
+                <li class="contact-list__item">
+                  <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                </li>
+              </ul>
+            </div>
+            <ul class="main-nav__socials socials-list">
+              <li class="socials-list__item">
+                <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+              </li>
+              <li class="socials-list__item">
+                <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              </li>
+              <li class="socials-list__item">
+                <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="page-header__footer">
+          <h1 class="header__title">Попутчики</h1>
+          <a class="page-header__link-main button button--simple" href="index.html">На главную</a>
         </div>
-      </nav>
-      <h1>Попутчики</h1>
-      <a class="button button--simple" href="index.html">На главную</a>
+      </div>
     </header>
-    <main class="page-main">
+
+    <main class="page-main catalog-grid">
       <!-- Изменить секцию под сетки -->
 
-      <section class="filter-countries">
+      <section class="catalog-grid__filter-countries filter-countries">
         <div class="filter-countries__wrapper">
           <h2 class="visually-hidden">Подберите идеальную страну</h2>
           <div>
@@ -708,7 +716,7 @@
       </section>
 
       <!-- Добавить названия классов изменить при необходимости -->
-      <section class="page-main__section--yellow filter-features">
+      <section class="catalog-grid__filter-features filter-features">
         <div class="filter-features__wrapper">
           <h2 class="filter-features__title">Подберите идеального попутчика</h2>
           <form class="form-features" action="#" method="get">
@@ -755,12 +763,12 @@
       </section>
 
       <!-- ТРЕБУЕТ ПЕРЕСМОТРА -->
-      <section class="companions">
-        <div class="companions__wrapper">
+      <section class="catalog-grid__companions catalog-companions">
+        <div class="catalog-companions__wrapper">
           <!-- Изменить названия классов !!!! потому что они повторяются как на основной так и на этой странице -->
-          <ul class="companions__list users-list">
+          <ul class="catalog-companions__list">
 
-            <li class="users-list__item">
+            <li class="catalog-companions__item">
               <!-- Добавить уровень -->
               <img src="https://via.placeholder.com/150x150" alt="">
               <h3 class="users-list__user users-list__user--offline">Таня Фирсова</h3>
@@ -785,7 +793,7 @@
               <a class="users-list__button js-user-modal button button--round" href="#">Позвать!</a>
             </li>
 
-            <li class="users-list__item">
+            <li class="catalog-companions__item">
               <!-- Добавить уровень -->
               <img src="https://via.placeholder.com/150x150" alt="">
               <h3 class="users-list__user users-list__user--offline">Петя Демин</h3>
@@ -809,7 +817,7 @@
               <a class="users-list__button js-user-modal button button--round" href="#">Позвать!</a>
             </li>
 
-            <li class="users-list__item">
+            <li class="catalog-companions__item">
               <!-- Добавить уровень -->
               <img src="https://via.placeholder.com/150x150" alt="">
               <h3 class="users-list__user users-list__user--offline">Марк Смолов</h3>
@@ -834,7 +842,7 @@
               <a class="users-list__button js-user-modal button button--round" href="#">Позвать!</a>
             </li>
 
-            <li class="users-list__item">
+            <li class="catalog-companions__item">
               <!-- Добавить уровень -->
               <img src="https://via.placeholder.com/150x150" alt="">
               <h3 class="users-list__user users-list__user--online">Лариса Роговая</h3>
@@ -860,20 +868,12 @@
           </ul>
             <a class="button button--simple js-show-more" href="#">показать еще</a>
             <div class="pagination">
-              <ol class="pagination__list">
-                <li class="pagination__item">
-                  <a class="pagination__link pagination__link--current" href="#">1</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__link" href="#">2</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__link" href="#">3</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__link" href="#">4</a>
-                </li>
-              </ol>
+              <div class="pagination__list">
+                <a class="pagination__link pagination__link--current" href="#">1</a>
+                <a class="pagination__link" href="#">2</a>
+                <a class="pagination__link" href="#">3</a>
+                <a class="pagination__link" href="#">4</a>
+              </div>
               <div class="pagination__toggles">
                 <a class="pagination__link-prev" href="#">Показать предыдущую страницу</a>
                 <a class="pagination__link-next" href="#">Показать следующую страницу</a>
@@ -884,23 +884,25 @@
     </main>
 <!-- Изменить футер -->
     <footer class="page-footer">
-      <a class="page-footer__logo" href="#">
-        <img src="https://via.placeholder.com/150x150" alt="">
-      </a>
-      <ul class="page-footer__list page-footer__socials socials-list">
-        <li class="socials-list__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-        </li>
-        <li class="socials-list__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-        </li>
-        <li class="socials-list__item">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo logo" href="#">
+          <img src="https://via.placeholder.com/150x150" alt="">
+        </a>
+        <ul class="page-footer__socials socials-list">
+          <li class="socials-list__item">
+            <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright copyright">
+          <p class="copyright__text">Разработано</p>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
       </div>
     </footer>
   </body>

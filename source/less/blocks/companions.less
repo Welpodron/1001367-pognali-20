@@ -1,0 +1,88 @@
+.companions {
+  padding: 0 25px;
+
+  outline: 5px solid fade(blue, 50%);
+
+  @media (min-width: 768px) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 60px;
+  }
+}
+
+.companions__wrapper {
+  outline: 5px solid fade(blue, 50%);
+
+  @media (min-width: 768px) {
+    padding: 0 36px;
+  }
+
+  @media (min-width: 1440px) {
+    display: grid;
+    padding: 0;
+
+    column-gap: 60px;
+
+    grid-template-areas: "companions__header companions__header companions__list companions__list" "companions__button companions__button companions__list companions__list";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+  }
+}
+
+.companions__header {
+  padding-left: 25px;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 70px;
+
+    grid-area: companions__header;
+  }
+}
+
+.companions__item {
+  color: #444444;
+
+  background-color: #ffffff;
+}
+
+// ИЗМЕНИТЬ !
+.companions__item img {
+  display: block;
+  width: 100%;
+}
+
+.companions__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    display: grid;
+
+    column-gap: 50px;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1440px) {
+    column-gap: 60px;
+
+    grid-area: companions__list;
+  }
+}
+
+.companions__button {
+  @media (min-width: 1440px) {
+    padding-left: 70px;
+
+    grid-area: companions__button;
+  }
+}

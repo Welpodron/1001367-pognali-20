@@ -1,0 +1,30 @@
+.catalog-grid {
+  @media (min-width: 1440px) {
+    display: grid;
+    padding: 0 60px;
+
+    column-gap: 60px;
+    // grid-template-areas: "main-nav__site-list main-nav__site-list main-nav__additional-list";
+
+    grid-template-areas: "catalog-grid__filter-countries catalog-grid__filter-countries catalog-grid__filter-countries catalog-grid__filter-countries"
+    "catalog-grid__companions catalog-grid__companions catalog-grid__companions catalog-grid__filter-features";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+  }
+}
+
+.catalog-grid__filter-countries {
+  @media (min-width: 1440px) {
+    grid-area: catalog-grid__filter-countries;
+  }
+}
+.catalog-grid__companions {
+  @media (min-width: 1440px) {
+    grid-area: catalog-grid__companions;
+  }
+}
+.catalog-grid__filter-features {
+  @media (min-width: 1440px) {
+    grid-area: catalog-grid__filter-features;
+  }
+}

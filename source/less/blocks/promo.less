@@ -58,3 +58,85 @@
     //
   }
 }
+
+.promo {
+  outline: 5px solid fade(blue, 50%);
+
+  @media (min-width: 1440px) {
+    padding: 0 60px;
+  }
+}
+
+.promo__wrapper {
+  outline: 5px solid fade(blue, 50%);
+
+  @media (min-width: 1440px) {
+    display: grid;
+    padding: 0;
+
+    column-gap: 60px;
+
+    grid-template-areas: "promo__header promo__header promo__header promo__blockquote" "promo__steps-list promo__steps-list promo__steps-list promo__steps-list";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+  }
+}
+
+//ИЗМЕНИТЬ!
+.promo img {
+  @media (min-width: 1440px) {
+    position: absolute;
+
+    display: none;
+  }
+}
+
+.promo__nav {
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.promo__header {
+  @media (min-width: 1440px) {
+    padding-left: 70px;
+
+    grid-area: promo__header;
+  }
+}
+
+.promo__blockquote {
+  margin: 0;
+
+  @media (min-width: 1440px) {
+    grid-area: promo__blockquote;
+  }
+}
+
+// ПЕРЕменовать на просто List
+.promo__steps-list {
+  @media (min-width: 1440px) {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    grid-area: promo__steps-list;
+  }
+}
+
+// цвета в переменную все цвета должны быть капсом !!!
+.promo__item {
+  &--special-orange {
+    background-color: #ff8d30;
+  }
+  &--orange {
+    background-color: #FFA530;
+  }
+  &--special-yellow-dark {
+    background-color: #FFBD30;
+  }
+  &--basic-yellow {
+    background-color: #FFD74B;
+  }
+}
