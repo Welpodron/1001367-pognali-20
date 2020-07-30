@@ -1,8 +1,9 @@
 .my-plans__route {
+  margin: 0;
+
   font-weight: bold;
   font-size: 16px;
   line-height: 1;
-  margin: 0;
   @media (min-width: 768px) {
     font-size: 24px;
   }
@@ -14,9 +15,39 @@
 
 .my-plans {
   padding: 0 25px;
+
+  background-color: #dfe3f0;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  background-color: #dfe3f0;
+
+  @media (min-width: 768px) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 60px;
+  }
+}
+
+.my-plans__title {
+  font-size: 24px;
+  line-height: 1;
+  color: #1d2e5b;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+  }
+}
+
+.my-plans__wrapper {
+  @media (min-width: 768px) {
+    padding: 0 35px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0;
+    padding-left: 65px;
+  }
 }
 
 .my-plans__list {
@@ -27,10 +58,11 @@
 }
 
 .my-plans__item {
+  margin-bottom: 10px;
+  padding: 25px;
+
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 25px;
-  margin-bottom: 10px;
 
   &:last-of-type {
     margin-bottom: 0;
