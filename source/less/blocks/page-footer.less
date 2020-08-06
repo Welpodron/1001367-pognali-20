@@ -1,7 +1,12 @@
 .page-footer {
-  outline: 5px solid fade(green, 50%);
-  outline-offset: -5px;
+  margin-top: -35px;
   padding: 0 25px;
+
+  text-align: center;
+
+  background-color: #ffffff;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
 
   @media (min-width: 768px) {
     padding: 0 40px;
@@ -12,12 +17,32 @@
   }
 }
 
+.page-footer__logo {
+  display: block;
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__socials {
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
 .page-footer__wrapper {
-  outline: 5px solid fade(blue, 50%);
-  outline-offset: -5px;
+  padding-top: 37px;
 
   @media (min-width: 768px) {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 46px;
+    padding-bottom: 32px;
   }
 
   @media (min-width: 1440px) {

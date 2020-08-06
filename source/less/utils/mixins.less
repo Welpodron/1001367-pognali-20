@@ -1,0 +1,28 @@
+.font
+  (@font-size: none, @line-height: none, @font-weight: none, @color: none, @font-style: none) {
+  & when not (@font-size = none) {
+    font-size: @font-size;
+  }
+
+  & when not (@line-height = none) {
+    line-height: @line-height;
+  }
+
+  & when not (@font-weight = none) {
+    font-weight: @font-weight;
+  }
+
+  & when not (@color = none) {
+    color: @color;
+  }
+
+  & when not (@font-style = none) {
+    font-style: @font-style;
+  }
+}
+
+.list-reset () {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

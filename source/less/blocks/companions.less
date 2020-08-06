@@ -1,7 +1,7 @@
 .companions {
   padding: 0 25px;
 
-  outline: 5px solid fade(blue, 50%);
+  // outline: 5px solid fade(blue, 50%);
 
   @media (min-width: 768px) {
     padding: 0 40px;
@@ -13,10 +13,10 @@
 }
 
 .companions__wrapper {
-  outline: 5px solid fade(blue, 50%);
+  // outline: 5px solid fade(blue, 50%);
 
   @media (min-width: 768px) {
-    padding: 0 36px;
+    // padding: 0 36px;
   }
 
   @media (min-width: 1440px) {
@@ -45,21 +45,41 @@
   }
 }
 
+// color убрать для списка
 .companions__item {
+  // display: flex;
+  // flex-direction: column;
+  outline: 5px solid fade(green, 50%);
+  outline-offset: -5px;
   color: #444444;
+}
+
+.companions__container {
+  position: relative;
 
   background-color: #ffffff;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-bottom: 20px;
+  padding: 0 20px 20px 20px;
 }
 
 // ИЗМЕНИТЬ !
-.companions__item img {
+.companions__image {
   display: block;
   width: 100%;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .companions__list {
   margin: 0;
   padding: 0;
+  outline: 5px solid fade(red, 50%);
+  outline-offset: -5px;
+
+  max-width: 630px;
 
   list-style: none;
   text-align: center;
@@ -69,7 +89,7 @@
 
     column-gap: 50px;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 285px);
   }
 
   @media (min-width: 1440px) {
