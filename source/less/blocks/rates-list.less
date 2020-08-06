@@ -1,14 +1,72 @@
 .rates-list {
+  padding-right: 45px;
+
   font-weight: @light;
   font-size: 16px;
   line-height: 1;
+
+  counter-reset: rates-list__item-index;
 
   @media (min-width: 768px) {
     font-size: 28px;
   }
 }
 
+.rates-list__item {
+  position: relative;
+
+  padding-top: 13px;
+  padding-bottom: 15px;
+
+  border-top: 1px solid #e1e3e9;
+
+  &:last-of-type {
+    border-bottom: 1px solid #e1e3e9;
+  }
+
+  &::after {
+    content: counter(rates-list__item-index);
+    position: absolute;
+    top: 0;
+    left: calc(100% + 10px);
+
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+
+    font-weight: normal;
+    color: #ffffff;
+
+    background-color: #ff8d30;
+    border-radius: 50%;
+
+    counter-increment: rates-list__item-index;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+
+    &::after {
+      top: 0;
+      left: 0;
+
+      width: 68px;
+      height: 68px;
+    }
+  }
+}
+
+.rates-list__feature {
+  margin-bottom: 6px;
+}
+
 .rates-list__price {
+  margin-left: 0;
+
   @media (min-width: 768px) {
     text-align: right;
   }

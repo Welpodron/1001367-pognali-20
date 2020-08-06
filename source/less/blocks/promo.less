@@ -44,23 +44,36 @@
   }
 }
 
-.promo__steps-list {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 1;
-  color: #161c35;
+.promo__contact-list {
+  display: flex;
+}
 
-  @media (min-width: 768px) {
-    font-size: 24px;
-  }
+.promo__user-list {
+  flex-grow: 1;
+}
 
-  @media (min-width: 1440px) {
-    //
-  }
+.promo__contact-list .contact-list__link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+
+  background-color: #ffd74b;
+  border-radius: 50%;
+}
+
+.promo__contact-list .contact-list__link-icon {
+  margin: auto;
 }
 
 .promo {
-  outline: 5px solid fade(blue, 50%);
+  padding: 0 25px;
+
+  background-image: url(../../img/globe-back-mobile@1x.jpg);
+  // outline: 5px solid fade(blue, 50%);
+
+  @media (min-width: 768px) {
+    padding: 0 40px;
+  }
 
   @media (min-width: 1440px) {
     padding: 0 60px;
@@ -68,7 +81,10 @@
 }
 
 .promo__wrapper {
-  outline: 5px solid fade(blue, 50%);
+  // outline: 5px solid fade(blue, 50%);
+  max-width: 1320px;
+  margin: 0 auto;
+
 
   @media (min-width: 1440px) {
     display: grid;
@@ -92,7 +108,9 @@
 }
 
 .promo__nav {
-  @media (min-width: 1440px) {
+  display: flex;
+
+  @media (min-width: 768px) {
     display: none;
   }
 }
@@ -107,6 +125,8 @@
 
 .promo__blockquote {
   margin: 0;
+  padding: 0 25px;
+  padding-right: 60px;
 
   @media (min-width: 1440px) {
     grid-area: promo__blockquote;
@@ -115,28 +135,157 @@
 
 // ПЕРЕменовать на просто List
 .promo__steps-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  color: #161c35;
+
+  counter-reset: promo__item-index;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    font-size: 24px;
+  }
+
   @media (min-width: 1440px) {
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-
     grid-area: promo__steps-list;
   }
 }
 
 // цвета в переменную все цвета должны быть капсом !!!
 .promo__item {
-  &--special-orange {
-    background-color: #ff8d30;
+  display: flex;
+  flex-basis: 90px;
+  margin-bottom: -10px;
+  padding: 22px 20px 20px 24px;
+
+  word-break: break-all;
+
+  background-color: #ff8d30;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  &::after {
+    content: counter(promo__item-index);
+
+    display: block;
+    margin-left: auto;
+
+    color: #ffffff;
+
+    counter-increment: promo__item-index;
   }
-  &--orange {
-    background-color: #FFA530;
+
+  &:nth-of-type(2n) {
+    background-color: #ffa530;
   }
-  &--special-yellow-dark {
-    background-color: #FFBD30;
+
+  &:nth-of-type(3n) {
+    background-color: #ffbd30;
   }
-  &--basic-yellow {
-    background-color: #FFD74B;
+
+  &:last-of-type {
+    flex-basis: 80px;
+    margin-bottom: 0;
+
+    background-color: #ffd74b;
+    border-radius: 10px;
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+    flex-basis: calc(50% + 19px);
+    margin-bottom: 0;
+    padding: 28px 20px 20px 33px;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+
+    &::after {
+      margin-top: 13px;
+
+      font-size: 30px;
+    }
+
+    &:last-of-type {
+      flex-basis: calc(50% + 19px);
+
+      border-radius: 0;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    &:nth-of-type(2n) {
+      border-top-right-radius: 20px;
+    }
+
+    &:nth-of-type(3n) {
+      border-radius: 0;
+      border-bottom-left-radius: 20px;
+    }
+
+    &:nth-of-type(4n) {
+      border-radius: 0;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    &:nth-of-type(even) {
+      flex-basis: 50%;
+    }
+
+    &:nth-of-type(odd) {
+      margin-right: -19px;
+      padding-right: 30px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    display: flex;
+    padding: 29px 5% 29px 33px;
+
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    &:nth-of-type(odd) {
+      margin-right: 0;
+      padding-right: 5%;
+    }
+
+    &:not(:first-of-type) {
+      margin-left: -30px;
+    }
+
+    &:first-of-type {
+      max-width: 345px;
+    }
+
+    &:nth-of-type(2) {
+      max-width: 375px;
+    }
+
+    &:nth-last-of-type(2) {
+      max-width: 375px;
+    }
+
+    &::after {
+      margin-top: 0;
+
+      font-size: 24px;
+    }
+
+    &:last-of-type {
+      max-width: 315px;
+      padding-right: 2.5%;
+    }
   }
 }

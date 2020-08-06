@@ -1,5 +1,42 @@
 .flags-list {
-  padding: 0;
+  position: relative;
+  bottom: calc(25px / 2);
+
+  display: flex;
+  justify-content: center;
   margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+// Изменить тултип
+
+.flags-list__item {
+  position: relative;
+
+  width: 35px;
+  height: 25px;
+
+  background-size: 35px 25px;
+
+  &--sri-lanka {
+    background-image: url(../../img/flag-sri-lanka.svg);
+  }
+
+  &--thailand {
+    background-image: url(../../img/flag-thailand.svg);
+  }
+
+  &--seychelles {
+    background-image: url(../../img/flag-seychelles.svg);
+  }
+
+  &--belgium {
+    background-image: url(../../img/flag-belgium.svg);
+  }
+
+  &--czech {
+    background-image: url(../../img/flag-czech.svg);
+  }
 }
