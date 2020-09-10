@@ -1,0 +1,157 @@
+.form-number {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &::after {
+    order: -1;
+
+    .set-font(@font-weight: @medium, @font-size: 16px, @line-height: 16px, @color: fade(@basic-blue-light, 30%), @text-align: right, @text-transform: uppercase, @letter-spacing: 0.07em);
+  }
+
+  &--quantity {
+    &::after {
+      content: "чел.";
+    }
+  }
+
+  &--duration {
+    &::after {
+      content: "дн.";
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-border(@t: 1px solid @athens-gray);
+    .set-padding(@t: 24px);
+
+    &::after {
+      .set-font(@font-size: 20px, @line-height: 18px);
+    }
+
+    &--duration {
+      order: 1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    align-items: center;
+    .set-padding(@t: 0);
+    .set-border(@t: none);
+
+    &::after {
+      .set-font(@color: @basic-blue-light, @letter-spacing: 0);
+      order: 1;
+    }
+  }
+}
+
+.form-number__group {
+  display: flex;
+
+  .set-block-size(@width: 100%);
+  .set-margin(@t: 10px);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@t: 26px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-margin(@t: 0);
+    .set-block-size(@width: 180px);
+  }
+}
+
+.form-number__label {
+  order: -1;
+
+  .set-font(@font-weight: @medium, @font-size: 16px, @line-height: 16px, @color: @basic-blue-light, @text-transform: uppercase, @letter-spacing: 0.1em);
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 20px, @line-height: 18px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-font(@letter-spacing: 0);
+  }
+}
+
+.form-number__input {
+  flex-grow: 1;
+
+  .set-block-size(@min-width: 1px);
+
+  text-align: center;
+
+  // ios fix
+
+  background-clip: padding-box;
+
+  .set-border(@t: 1px solid #cbced9, @r: none, @b: 1px solid #cbced9, @l: none);
+  .set-border-radius(@all: 0);
+  .set-font(@font-weight: @medium, @font-size: 14px, @line-height: 14px, @color: @basic-blue-light, @text-transform: uppercase);
+  .set-padding(@all: 0);
+  .set-padding(@t: 13px, @b: 12px);
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 20px, @line-height: 18px);
+    .set-padding(@t: 20px, @b: 24px);
+  }
+}
+
+.form-number__button {
+  position: relative;
+
+  .set-background(@color: transparent);
+  .set-block-size(@width: 42px);
+  .set-border(@all: 1px solid #cbced9);
+  .set-padding(@all: 0);
+
+  &::before {
+    position: absolute;
+
+    content: "";
+
+    .set-background(@color: #cccccc);
+    .set-block-size(@width: 14px, @height: 2px);
+    .set-position(@t: calc(50% - 2px / 2), @l: calc(50% - 14px / 2));
+  }
+
+  &--decrement {
+    order: -1;
+
+    .set-border(@r: none);
+    .set-border-radius(@tl: 4px, @bl: 4px);
+  }
+
+  &--increment {
+    .set-border(@l: none);
+    .set-border-radius(@tr: 4px, @br: 4px);
+
+    &::after {
+      position: absolute;
+
+      content: "";
+
+      .set-background(@color: #cccccc);
+      .set-block-size(@width: 2px, @height: 14px);
+      .set-position(@t: calc(50% - 14px / 2), @l: calc(50% - 2px / 2));
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-block-size(@width: 60px);
+
+    &::before {
+      .set-block-size(@width: 20px);
+      .set-position(@l: calc(50% - 20px / 2));
+    }
+
+    &--increment {
+      &::after {
+        .set-block-size(@height: 20px);
+        .set-position(@t: calc(50% - 20px / 2));
+      }
+    }
+  }
+}

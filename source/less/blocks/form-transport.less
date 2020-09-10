@@ -1,0 +1,93 @@
+.form-transport {
+  display: flex;
+  flex-direction: column;
+
+  .set-border(@all: 1px solid @basic-gray-light-3);
+  .set-border-radius(@all: 10px);
+  .set-padding(@r: 10px, @b: 15px, @l: 10px);
+
+  @media (min-width: @tablet-width) {
+    align-self: flex-start;
+    flex-direction: column-reverse;
+
+    .set-padding(@r: 0, @b: 0, @l: 0);
+  }
+}
+
+.form-transport__list {
+  display: flex;
+  justify-content: center;
+
+  .reset-list();
+}
+
+.form-transport__title {
+  align-self: center;
+
+  .set-background(@color: @basic-gray-light);
+  .set-font(@font-weight: bold, @font-size: 16px, @line-height: 18px, @color: @basic-blue-light, @text-align: center, @text-transform: uppercase);
+  .set-margin(@t: -9px, @b: 5px);
+
+  @media (min-width: @tablet-width) {
+    .set-block-size(@width: 152px);
+    .set-font(@font-weight: @medium, @font-size: 20px, @line-height: 20px, @letter-spacing: 0.08em);
+    .set-margin(@t: 0, @b: -10px);
+  }
+}
+
+.form-transport__item {
+  position: relative;
+}
+
+.form-transport__label {
+  display: grid;
+
+  place-items: center;
+  .set-background(@color: @basic-white);
+  .set-block-size(@width: 32px, @height: 32px);
+  .set-border-radius(@all: 50%);
+  .set-font(@color: @basic-gray-light-2);
+
+  &:hover {
+    box-shadow: 0 2px 6px 0 fade(@basic-blue, 17%);
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-block-size(@width: 43px, @height: 43px);
+  }
+}
+
+.form-transport__input-option:checked + .form-transport__label {
+  .set-font(@color: @basic-blue-light);
+}
+
+.form-transport__icon {
+  fill: currentColor;
+}
+
+.form-transport__name {
+  position: absolute;
+
+  transform: translateX(-50%);
+
+  display: none;
+
+  .set-background(@color: @basic-blue-dark);
+  .set-border-radius(@all: 4px);
+  .set-font(@font-size: 20px, @line-height: 1, @color: @basic-white, @text-align: center);
+  .set-padding(@t: 10px, @r: 15px, @b: 10px, @l: 15px);
+  .set-position(@t: calc(100% + 12px), @l: 50%);
+
+  &::before {
+    position: absolute;
+
+    content: "";
+
+    .set-border(@r: 6px solid transparent, @b: 6px solid @basic-blue-dark, @l: 6px solid transparent);
+    .set-position(@l: calc(50% - 6px), @b: 100%);
+  }
+}
+
+.form-transport__label:hover .form-transport__name {
+  opacity: 1;
+}

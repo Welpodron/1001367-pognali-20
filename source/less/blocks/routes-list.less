@@ -1,0 +1,244 @@
+.routes-list {
+  .reset-list();
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    .set-border(@t: 1px solid @athens-gray);
+    .set-padding(@t: 42px);
+
+    &::before {
+      position: absolute;
+
+      content: "";
+
+      .set-background(@color: @athens-gray);
+      .set-block-size(@width: 1px, @height: 100%);
+      .set-position(@t: 0, @r: calc(70px + 15px + 24px + 15px + 14px / 2 + 3px));
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-padding(@t: 62px);
+  }
+}
+
+.routes-list__item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto;
+
+  &:not(:last-of-type) {
+    .set-margin(@b: 22px);
+  }
+
+  &::after {
+    position: absolute;
+
+    content: "";
+
+    .set-background(@color: @basic-white);
+    .set-block-size(@width: 8px, @height: 8px);
+    .set-border(@all: 1px solid @basic-gray-light-3);
+    .set-border-radius(@all: 50%);
+    .set-position(@t: calc(50% - 8px / 2), @r: calc(53px - 8px / 2));
+  }
+
+  &--active::after {
+    .set-background(@color: @basic-blue-light);
+    .set-border(@all: 1px solid @basic-blue-light);
+  }
+
+  @media (min-width: @tablet-width) {
+    column-gap: 15px;
+    grid-template-columns: 1fr 70px [button-delete-start] 24px [button-delete-end];
+    .set-margin(@b: 16px);
+
+    &::after {
+      .set-block-size(@width: 14px, @height: 14px);
+      .set-position(@t: calc(50% - 14px / 2 - 2px), @r: calc(70px + 24px + 15px * 2 + 4px));
+    }
+  }
+
+  @media (max-width: @tablet-width - 1px) {
+    &:not(:last-of-type)::before {
+      position: absolute;
+
+      content: "";
+
+      .set-block-size(@width: 8px, @height: 10px);
+      .set-position(@t: calc(100% + 10px / 2), @r: calc(53px - 8px / 2 - 1px / 2));
+      .set-sprite-background(@width: 8px, @height: 10px, @index: @utils-small-arrow);
+    }
+  }
+}
+
+.routes-list__button {
+  position: relative;
+
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+
+  white-space: nowrap;
+
+  .set-background(@color: transparent);
+  .set-border(@all: 1px solid @basic-gray-light-3);
+  .set-border-radius(@all: 4px);
+  .set-font(@font-weight: @medium, @font-size: 14px, @line-height: 18px, @color: @basic-blue-light, @text-align: left, @text-transform: uppercase, @letter-spacing: 0.1em);
+  .set-padding(@t: 12px, @r: 9px, @b: 10px, @l: 9px);
+
+  &::after {
+    position: absolute;
+
+    content: "";
+
+    opacity: 0.3;
+
+    .set-block-size(@width: 11px, @height: 9px);
+    .set-position(@t: calc(50% - 9px / 2), @r: 15px);
+    .set-sprite-background(@width: 11px, @height: 9px, @index: @utils-dropdown-form);
+  }
+
+  &::before {
+    position: absolute;
+
+    content: "";
+
+    .set-background(@image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, @basic-white 31%));
+    .set-block-size(@width: 52px, @height: 100%);
+    .set-position(@t: 0, @r: 0);
+  }
+
+  &--add {
+    .set-background(@color: @basic-gray-light);
+    .set-border(@all: 1px solid @basic-gray-light);
+
+    &::before {
+      .set-background(@image: linear-gradient(90deg, rgba(237, 239, 246, 0) 0%, @basic-gray-light 20%));
+      .set-block-size(@width: 75px);
+    }
+  }
+
+  &--select::before {
+    .set-background(@image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, @basic-white 20%));
+    .set-block-size(@width: 75px);
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 20px, @line-height: 20px);
+    .set-margin(@r: 35px);
+    .set-padding(@t: 24px, @r: 9px, @b: 24px, @l: 22px);
+  }
+}
+
+.routes-list__flag {
+  display: grid;
+
+  place-items: center;
+  .set-block-size(@width: 53px);
+  .set-border(@all: 1px solid @basic-gray-light-3);
+  .set-border-radius(@all: 4px);
+  .set-margin(@l: -1px);
+
+  &::before {
+    content: "";
+
+    .set-block-size(@width: 35px, @height: 24px);
+  }
+
+  &--bosnia {
+    &::before {
+      .set-sprite-background(@width: 35px, @height: 24px, @index: @flag-bosnia);
+    }
+  }
+
+  &--czech {
+    &::before {
+      .set-sprite-background(@width: 35px, @height: 24px, @index: @flag-czech);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-block-size(@width: 70px);
+    .set-border(@all: none);
+    .set-margin(@l: 0);
+
+    &::before {
+      .set-block-size(@width: 70px, @height: 47px);
+    }
+
+    &--bosnia {
+      &::before {
+        .set-sprite-background(@width: 70px, @height: 47px, @index: @flag-bosnia);
+      }
+    }
+
+    &--czech {
+      &::before {
+        .set-sprite-background(@width: 70px, @height: 47px, @index: @flag-czech);
+      }
+    }
+  }
+}
+
+.routes-list__button-delete {
+  position: absolute;
+
+  .set-background(@color: @basic-gray-light);
+  .set-block-size(@width: 21px, @height: 21px);
+  .set-border(@all: none);
+  .set-border-radius(@all: 50%);
+  .set-padding(@all: 0);
+  .set-position(@t: calc(-21px / 2), @l: calc(100% - 21px / 2));
+
+  &::after {
+    position: absolute;
+
+    content: "";
+    transform: rotate(45deg);
+
+    .set-background(@color: @basic-gray-dark-3);
+    .set-block-size(@width: 10px, @height: 1px);
+    .set-border-radius(@all: 10px);
+    .set-position(@t: calc(21px / 2 - 1px / 2), @l: calc(21px / 2 - 10px / 2));
+  }
+
+  &::before {
+    position: absolute;
+
+    content: "";
+    transform: rotate(-45deg);
+
+    .set-background(@color: @basic-gray-dark-3);
+    .set-block-size(@width: 10px, @height: 1px);
+    .set-border-radius(@all: 10px);
+    .set-position(@t: calc(21px / 2 - 1px / 2), @l: calc(21px / 2 - 10px / 2));
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    grid-column: button-delete-start / button-delete-end;
+    .set-background(@color: transparent);
+    .set-block-size(@width: 24px, @height: auto);
+    .set-border-radius(@all: 0);
+    .set-margin(@l: 7px);
+    .set-position(@t: 0, @l: 0);
+
+    &::after {
+      .set-block-size(@width: 25px, @height: 2px);
+      .set-border-radius(@all: 10px);
+      .set-position(@t: calc(100% / 2 - 2px / 2), @l: calc(100% / 2 - 25px / 2));
+    }
+
+    &::before {
+      .set-block-size(@width: 25px, @height: 2px);
+      .set-border-radius(@all: 10px);
+      .set-position(@t: calc(100% / 2 - 2px / 2), @l: calc(100% / 2  - 25px / 2));
+    }
+  }
+}

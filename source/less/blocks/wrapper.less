@@ -1,0 +1,21 @@
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+
+    padding-right: 60px;
+    padding-left: 60px;
+
+    column-gap: 60px;
+    grid-template-columns: repeat(4, 285px);
+  }
+}

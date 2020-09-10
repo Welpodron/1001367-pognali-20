@@ -1,15 +1,16 @@
-.business-rates-list__feature,
 .business-rates-list__price {
-  font-weight: @light;
-  font-size: 16px;
-  line-height: 22px;
+  margin: 0;
+}
 
-  @media (min-width: 768px) {
-    font-size: 22px;
-    line-height: 28px;
+.business-rates-list__item {
+  border-top: 1px solid #e1e3e9;
+
+  &:last-of-type {
+    border-bottom: 1px solid #e1e3e9;
   }
 
-  @media (min-width: 1440px) {
-    //
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr auto;
   }
 }

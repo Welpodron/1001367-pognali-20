@@ -1,65 +1,221 @@
-.form-features__title {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
+.form-features__fieldset {
+  // .set-padding(@t: 11px, @r: 5px, @b: 10px, @l: 5px);
+  display: none;
 
-  &::after {
-    content: "down";
-  }
+  .reset-fieldset();
 
-  @media (min-width: 768px) {
-    font-weight: @medium;
-    font-size: 20px;
-    line-height: 20px;
-
-    &::after {
-      content: ":";
-    }
-  }
-
-  @media (min-width: 1440px) {
-    line-height: 22px;
-
-    &::after {
-      content: "down";
-    }
-  }
-}
-
-.form-features__label {
-  font-size: 15px;
-  line-height: 20px;
-  color: #000000;
-
-  @media (min-width: 768px) {
-    font-weight: @medium;
-    font-size: 20px;
-  }
-
-  @media (min-width: 1440px) {
-    //
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    display: block;
   }
 }
 
 .form-features__section {
-  @media (min-width: 1440px) {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    margin-bottom: 20px;
-    padding: 0;
+  @media (max-width: @tablet-width - 1px), (min-width: @desktop-width) {
+    .set-border(@t: 1px solid @basic-yellow-dark);
+  }
 
-    border: none;
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    display: grid;
+    align-items: center;
+
+    column-gap: 11px;
+    grid-template-columns: 110px 1fr;
+
+    &--checkboxes {
+      .set-margin(@b: 26px);
+    }
+
+    &--transport {
+      .set-margin(@b: 12px);
+    }
+
+    &:first-of-type {
+      .set-border(@t: 1px solid @basic-yellow-dark);
+      .set-padding(@t: 34px);
+    }
+
+    &:last-of-type {
+      .set-border(@b: 1px solid @basic-yellow-dark);
+      .set-padding(@b: 36px);
+    }
+  }
+}
+
+@media (max-width: @tablet-width - 1px), (min-width: @desktop-width) {
+  .form-features__fieldset--active {
+    display: block;
+  }
+
+  .form-features__fieldset--active .form-features__button::after {
+    transform: rotate(180deg);
+  }
+}
+
+.form-features__button {
+  &--toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .set-background(@color: transparent);
+    .set-block-size(@width: 100%);
+    .set-border(@all: none);
+    .set-font(@font-weight: bold, @font-size: 16px, @line-height: 18px, @text-transform: uppercase, @color: @basic-blue-light, @text-align: left);
+    .set-margin(@t: 11px, @b: 10px);
+    .set-padding(@all: 0);
+    .set-padding(@r: 4px, @l: 6px);
+
+    &::after {
+      content: "";
+
+      .set-border(@r: 5px solid transparent, @t: 6px solid @special-blue-dark, @l: 5px solid transparent);
+    }
+
+    @media (min-width: @tablet-width) {
+      .set-font(@font-weight: @medium, @font-size: 20px, @line-height: 20px);
+    }
+
+    @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+      display: block;
+
+      .set-margin(@t: 0, @b: 0);
+      .set-padding(@r: 0, @l: 0);
+
+      &::after {
+        content: ":";
+
+        .set-border(@r: none, @t: none, @l: none);
+      }
+    }
+  }
+
+  &--toggle-active::after {
+    transform: rotate(180deg);
+  }
+
+  &--submit {
+    .set-background(@color: @basic-white);
+    .set-block-size(@width: 100%);
+    .set-border(@all: none);
+    .set-border-radius(@all: 25px);
+    .set-font(@font-weight: bold, @font-size: 17px, @line-height: 1, @color: @basic-blue, @text-align: center, @text-transform: uppercase);
+    .set-margin(@t: 25px);
+    .set-padding(@t: 13px, @r: 13px, @b: 10px, @l: 13px);
+
+    @media (min-width: @tablet-width) {
+      .set-font(@font-size: 20px);
+      .set-margin(@t: 36px);
+      .set-padding(@t: 16px, @b: 14px);
+    }
+  }
+}
+
+.form-features__container {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.form-features__input-option:checked + .form-features__label::after {
+  .set-sprite-background(@width: 9px, @height: 9px, @index: @utils-ticks-spd);
+
+  @media (min-width: @tablet-width) {
+    .set-sprite-background(@width: 11px, @height: 11px, @index: @utils-ticks-spd);
   }
 }
 
 .form-features__label {
-  @media (min-width: 1440px) {
-    margin-bottom: 16px;
+  position: relative;
 
-    &:last-of-type {
-      margin-bottom: 0;
+  display: inline-flex;
+  align-items: flex-start;
+
+  .set-font(@font-size: 15px, @line-height: 20px);
+
+  &::before {
+    content: "";
+
+    .set-background(@color: @basic-white);
+    .set-block-size(@width: 18px, @height: 18px);
+    flex-shrink: 0;
+    .set-border-radius(@all: 4px);
+    .set-margin(@r: 9px);
+  }
+
+  &::after {
+    position: absolute;
+
+    content: "";
+
+    .set-block-size(@width: 9px, @height: 9px);
+    .set-position(@t: calc(18px / 2 - 9px / 2), @l: calc(9px / 2));
+  }
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+
+    .set-font(@font-size: 20px);
+
+    &::before {
+      .set-block-size(@width: 24px, @height: 24px);
+      .set-margin(@r: 12px);
     }
+
+    &::after {
+      .set-block-size(@width: 11px, @height: 11px);
+      .set-position(@t: calc(24px / 2 - 11px / 2), @l: calc(11px / 2 + 1px));
+    }
+  }
+}
+
+.form-features__list {
+  display: grid;
+
+  .reset-list();
+  word-break: break-all;
+  row-gap: 10px;
+  .set-margin(@b: 18px);
+  .set-padding(@t: 4px, @l: 5px);
+
+  &--transport-list {
+    display: flex;
+
+    .set-margin(@b: 19px);
+    .set-padding(@t: 6px, @l: 6px);
+  }
+
+  @media (min-width: @tablet-width) {
+    column-gap: 14px;
+    grid-template-columns: repeat(3, 1fr);
+    .set-margin(@b: 0);
+    .set-padding(@t: 0, @l: 5px);
+
+    &--transport-list {
+      column-gap: 0;
+      .set-padding(@l: 0);
+    }
+  }
+}
+
+.form-features__item {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    &:last-of-type {
+      .set-margin(@l: 4px);
+    }
+  }
+}
+
+.form-features__level-range {
+  .set-margin(@b: 24px);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 0);
   }
 }

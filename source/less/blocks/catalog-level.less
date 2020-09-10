@@ -1,0 +1,38 @@
+.catalog-level svg {
+  fill: transparent;
+  stroke: #ff8d30;
+  stroke-linecap: round;
+  stroke-width: 4px;
+}
+
+.catalog-level--99 svg {
+  .set-circle-level(@radius: 28px, @percent: 99);
+}
+
+.catalog-level--80 svg {
+  .set-circle-level(@radius: 28px, @percent: 80);
+}
+
+.catalog-level--50 svg {
+  .set-circle-level(@radius: 28px, @percent: 50);
+}
+
+.catalog-level--25 svg {
+  .set-circle-level(@radius: 28px, @percent: 25);
+}
+
+.catalog-level {
+  position: relative;
+
+  display: grid;
+
+  place-items: center;
+
+  &::before {
+    position: absolute;
+
+    content: attr(data-value);
+
+    .set-font(@font-weight: bold, @font-size: 24px, @line-height: 24px, @color: @basic-blue-light);
+  }
+}

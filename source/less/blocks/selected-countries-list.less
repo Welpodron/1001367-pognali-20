@@ -1,44 +1,173 @@
 .selected-countries-list {
-  margin: 0;
-  padding: 0;
+  position: relative;
 
-  list-style: none;
-}
+  .reset-list();
 
-.selected-countries-list__name {
-  font-weight: @medium;
-  font-size: 18px;
-  line-height: 1;
-  color: #1d2e5b;
-  letter-spacing: 0.01em;
+  &::before {
+    position: absolute;
 
-  @media (min-width: 768px) {
-    font-weight: bold;
-    font-size: 30px;
-    letter-spacing: normal;
+    content: "";
+
+    .set-background(@color: @basic-blue-light);
+    .set-block-size(@width: 2px, @height: calc(50% + 9px));
+    .set-position(@t: 13px, @l: -14px);
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-padding(@t: 26px, @r: 28px);
+    .set-border(@t: 1px solid @athens-gray);
+
+    &::before {
+      .set-position(@t: calc(47px / 2 - 14px / 2), @l: calc(100% - 3px));
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-padding(@t: 79px, @r: 270px);
+
+    &::before {
+      .set-position(@t: 87px, @l: calc(100% - 2px - 225px));
+      .set-block-size(@height: calc(100% - 214px - 79px));
+    }
   }
 }
 
-// Для плейсхолдера нужно будет задать другие стили
+.selected-countries-list__item--bosnia .selected-countries-list__name::after {
+  .set-sprite-background(@width: 35px, @height: 24px, @index: @flag-bosnia);
+
+  @media (min-width: @tablet-width) {
+    .set-sprite-background(@width: 70px, @height: 47px, @index: @flag-bosnia);
+  }
+}
+
+.selected-countries-list__item--czech .selected-countries-list__name::after {
+  .set-sprite-background(@width: 35px, @height: 24px, @index: @flag-czech);
+
+  @media (min-width: @tablet-width) {
+    .set-sprite-background(@width: 70px, @height: 47px, @index: @flag-czech);
+  }
+}
+
+.selected-countries-list__item {
+  position: relative;
+
+  .set-margin(@b: 18px);
+
+  &:last-of-type {
+    .set-margin(@b: 0);
+  }
+
+  &::before {
+    position: absolute;
+
+    content: "";
+
+    .set-background(@color: @basic-blue-light);
+    .set-block-size(@width: 6px, @height: 6px);
+    .set-border-radius(@all: 50%);
+    .set-position(@t: calc(24px / 2 - 6px / 2), @l: calc(-6px / 2));
+  }
+
+  &::after {
+    position: absolute;
+
+    content: "";
+
+    .set-background(@color: @basic-blue-light);
+    .set-block-size(@width: 11px, @height: 2px);
+    .set-position(@t: calc(24px / 2 - 2px / 2), @l: calc(-11px - 6px / 2));
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 37px);
+
+    &::before {
+      .set-block-size(@width: 14px, @height: 14px);
+      .set-position(@t: calc(47px / 2 - 14px / 2), @l: calc(100% + 19px));
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-margin(@b: 47px);
+
+    &::before {
+      .set-position(@t: calc(30px / 2 - 14px / 2), @l: calc(100% + 37px));
+    }
+  }
+}
+
+.selected-countries-list__name {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .set-font(@font-weight: @medium, @font-size: 18px, @line-height: 1, @color: @basic-blue-light);
+  .set-margin(@b: 14px);
+  .set-padding(@l: 11px);
+
+  &::after {
+    position: relative;
+
+    content: "";
+
+    .set-block-size(@width: 35px, @height: 24px);
+  }
+
+  &::before {
+    position: absolute;
+
+    content: "";
+
+    .set-background(@image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, @basic-white 31%));
+    .set-block-size(@width: 72px, @height: 100%);
+    .set-position(@t: 0, @l: calc(100% - 72px));
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-weight: bold, @font-size: 30px);
+    .set-padding(@l: 0);
+    .set-margin(@b: 31px);
+
+    &::after {
+      .set-block-size(@width: 70px, @height: 47px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-margin(@b: 38px);
+
+    &::after {
+      position: absolute;
+      .set-position(@t: -4px, @l: calc(100% + 85px));
+    }
+  }
+}
 
 .selected-countries-list__text-area {
-  width: 100%;
-  min-height: 220px;
-  padding-top: 11px;
-  padding-right: 10px;
-  padding-left: 14px;
+  resize: none;
 
-  font-size: 16px;
-  line-height: 22px;
-  color: #444444;
+  background-clip: padding-box;
 
-  border: 1px solid #cbced9;
-  border-radius: 4px;
+  .set-block-size(@width: 100%, @height: 220px);
+  .set-border(@all: 1px solid @basic-gray-light-3);
+  .set-border-radius(@all: 4px);
+  .set-font(@font-size: 16px, @line-height: 22px, @color: @special-grey);
+  .set-padding(@t: 9px, @r: 13px, @b: 9px, @l: 13px);
 
-  resize: vertical;
+  @media (min-width: @tablet-width) {
+    .set-block-size(@height: 142px);
+    .set-padding(@t: 16px, @r: 30px, @b: 16px, @l: 17px);
+    .set-font(@font-size: 20px, @line-height: 23px, @color: @special-grey);
+  }
 
-  @media (min-width: 768px) {
-    font-size: 20px;
-    line-height: 23px;
+  @media (min-width: @desktop-width) {
+    .set-font(@line-height: 20px);
+    .set-padding(@t: 24px, @r: 0, @b: 24px, @l: 25px);
   }
 }

@@ -1,74 +1,72 @@
-.button {
-  display: block;
-
-  font-weight: bold;
+.button--square-round {
   font-size: 18px;
+  font-weight: bold;
   line-height: 1;
+
+  display: inline-grid;
+  align-items: center;
+
+  min-width: 100%;
+  padding: 22px 22px 22px 22px;
+
+  text-decoration: none;
+
   color: #1d2e5b;
-  word-break: break-all;
-
-  background-color: #ffd74b;
   border-radius: 10px;
-  padding: 22.2px 0;
-  padding-left: 25px;
+  background: #ffd74b;
 
-  &--simple {
-    font-size: 17px;
-    line-height: 30px;
-    text-transform: uppercase;
+  column-gap: 1.3em;
+  grid-template-columns: 1fr 14px;
 
-    background-color: transparent;
-    border-radius: 0;
-  }
-
-  // Подлежит исправлениям из-за мобильной версии (например кнопка АВТОРИЗАЦИЯ)
-  &--round {
-    font-size: 17px;
-    text-align: center;
-    color: #161c35;
-    text-transform: uppercase;
-
-    border-radius: 25px;
-  }
-
-  &--white {
-    background-color: #ffffff;
-  }
-
-  &--transparent {
-    background-color: transparent;
-    border: 3px solid #192144;
-  }
-
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
+    padding: 29px 32px;
     font-size: 24px;
-
     border-radius: 20px;
-
-    &--round {
-      font-size: 20px;
-    }
-
-    &--simple {
-      font-size: 20px;
-      line-height: 20px;
-
-      border-radius: 0;
-    }
   }
 }
 
-// .button__text {
-//   &::after {
-//     content: "";
-//     width: 11px;
-//     height: 13px;
-//     background-color: tomato;
-//     display: inline-block;
-//     background-image: url("data:image/svg+xml,%3Csvg width='11' height='13' viewBox='0 0 11 13' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0698 6.1626L0.157238 12.2248L0.157238 0.10042L10.0698 6.1626Z'/%3E%3C/svg%3E%0A");
-//   }
-// }
+.button--square-round::after {
+  height: 15px;
 
-// .button span {
-//   word-break: break-all;
-// }
+  content: "";
+
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='14' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 14' fill='%231D2E5B'%3E%3Cpolygon points='0,14 0,0.1 10,7.1 '/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+}
+
+.button--transparent {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 19px;
+
+  color: #1d2e5b;
+  border: 3px solid #192144;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+
+    padding: 24px 31px 26px 34px;
+
+    border-radius: 20px;
+  }
+}
+
+.button--transparent svg {
+  flex-shrink: 0;
+
+  fill: currentColor;
+
+  @media (min-width: @tablet-width) {
+    width: 14px;
+    height: 14px;
+  }
+}

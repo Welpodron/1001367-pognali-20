@@ -1,26 +1,34 @@
 .filter-features {
-  padding: 0 25px;
+  .set-background(@color: @basic-yellow);
+  .set-border-radius(@all: 20px);
+  .set-margin(@b: 28px);
+  word-break: break-word;
 
-  @media (min-width: 768px) {
-    padding: 0 40px;
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 41px);
   }
 
-  @media (min-width: 1440px) {
-    padding: 0;
+  @media (min-width: @desktop-width) {
+    align-self: flex-start;
   }
 }
 
 .filter-features__wrapper {
-  background-color: #FFD74B;
-  border-radius: 20px;
-  @media (min-width: 1440px) {
-    border-radius: 20px;
-    padding: 50px;
+  .set-padding(@t: 24px, @r: 20px, @b: 23px, @l: 20px);
+
+  @media (min-width: @tablet-width) {
+    .set-padding(@t: 35px, @r: 36px, @b: 37px, @l: 35px);
   }
 }
 
 .filter-features__title {
-  @media (min-width: 1440px) {
-    margin: 0;
+  .set-margin(@t: 0, @b: 24px);
+  .set-padding(@l: 5px);
+  .set-font(@font-size: 22px, @line-height: 1, @color: @basic-blue-light, @letter-spacing: 0.02em);
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 30px, @letter-spacing: normal);
+    .set-padding(@l: 0);
+    .set-margin(@b: 39px);
   }
 }

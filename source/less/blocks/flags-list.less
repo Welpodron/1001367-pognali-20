@@ -1,42 +1,86 @@
+@height: 25px;
+
 .flags-list {
-  position: relative;
-  bottom: calc(25px / 2);
-
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
-  padding: 0;
+  width: 145px;
 
-  list-style: none;
+  .reset-list();
+
+  margin: calc(-@height / 2) 0 13px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: calc(-@height / 2) 0 16px 0;
+  }
 }
-
-// Изменить тултип
 
 .flags-list__item {
   position: relative;
 
   width: 35px;
-  height: 25px;
+  height: @height;
+  margin: 0 20px 0 0;
 
-  background-size: 35px 25px;
+  &:nth-of-type(3n),
+  &:last-of-type {
+    margin: 0;
+  }
 
   &--sri-lanka {
-    background-image: url(../../img/flag-sri-lanka.svg);
+    .set-sprite-background(35px, @height, @flag-sri-lanka);
   }
 
   &--thailand {
-    background-image: url(../../img/flag-thailand.svg);
+    .set-sprite-background(35px, @height, @flag-thailand);
   }
 
   &--seychelles {
-    background-image: url(../../img/flag-seychelles.svg);
+    .set-sprite-background(35px, @height, @flag-seychelles);
   }
 
   &--belgium {
-    background-image: url(../../img/flag-belgium.svg);
+    .set-sprite-background(35px, @height, @flag-belgium);
   }
 
   &--czech {
-    background-image: url(../../img/flag-czech.svg);
+    .set-sprite-background(35px, @height, @flag-czech);
   }
+}
+
+.flags-list__item:hover::after {
+  content: attr(aria-label);
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  z-index: 1;
+
+  width: auto;
+  min-width: 110px;
+  padding: 10px 1em;
+
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #101d41;
+  border-radius: 4px;
+  transform: translateX(-50%);
+}
+
+.flags-list__item:hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 1;
+
+  width: 0;
+  height: 0;
+
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #101d41;
+  border-left: 5px solid transparent;
+  transform: translateX(-50%);
 }

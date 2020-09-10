@@ -1,74 +1,51 @@
 .page-footer {
-  margin-top: -35px;
-  padding: 0 25px;
+  .set-background(@color: @basic-white);
+  .set-border-radius(@tl: 30px, @tr: 30px);
 
-  text-align: center;
-
-  background-color: #ffffff;
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
-
-  @media (min-width: 768px) {
-    padding: 0 40px;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 0 60px;
-  }
-}
-
-.page-footer__logo {
-  display: block;
-  margin-bottom: 40px;
-
-  @media (min-width: 768px) {
-    margin-bottom: 0;
-  }
-}
-
-.page-footer__socials {
-  margin-bottom: 40px;
-
-  @media (min-width: 768px) {
-    margin-bottom: 0;
+  @media (min-width: @tablet-width) {
+    .set-border-radius(@tl: 60px, @tr: 60px);
   }
 }
 
 .page-footer__wrapper {
-  padding-top: 37px;
+  .set-padding(@t: 39px, @b: 19px);
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-top: 46px;
-    padding-bottom: 32px;
+
+    .set-padding(@t: 46px, @b: 32px);
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     display: grid;
-
-    column-gap: 60px;
-
-    grid-template-areas: "page-footer__logo page-footer__socials page-footer__socials page-footer__copyright";
-    grid-template-columns: repeat(4, 1fr);
+    .set-padding(@t: 47px, @b: 43px);
   }
 }
 
 .page-footer__logo {
-  @media (min-width: 1440px) {
-    grid-area: page-footer__logo;
+  .set-margin(@r: auto, @b: 38px, @l: auto);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@r: 0, @b: 0, @l: 0);
   }
 }
 
 .page-footer__socials {
-  @media (min-width: 1440px) {
-    grid-area: page-footer__socials;
+  .set-margin(@b: 36px);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@r: auto, @b: 0, @l: auto);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / span 2;
+    .set-margin(@r: 0, @l: 0);
   }
 }
 
 .page-footer__copyright {
-  @media (min-width: 1440px) {
-    grid-area: page-footer__copyright;
+  @media (min-width: @desktop-width) {
+    justify-self: flex-end;
   }
 }

@@ -1,0 +1,24 @@
+.input-level {
+  .set-block-size(@width: 100%);
+  .set-padding(@t: 9px, @r: 9px, @b: 8px, @l: 9px);
+  .set-border(@all: 1px solid @basic-gray-light-3);
+  .set-font(@font-weight: @medium, @font-size: 14px, @line-height: 13px, @color: @basic-blue-light, @text-align: center, @letter-spacing: 0.06em);
+
+  &--from {
+    .set-border(@r: none);
+    .set-border-radius(@tl: 4px, @bl: 4px);
+    box-shadow: 1px 0 0 0 @basic-gray-light-3;
+  }
+
+  &--to {
+    .set-border(@l: none);
+    .set-border-radius(@tr: 4px, @br: 4px);
+    box-shadow: -1px 0 0 0 @basic-gray-light-3;
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-padding(@t: 10px, @b: 10px);
+    .set-block-size(@width: 74px);
+    .set-font(@font-size: 20px, @line-height: 20px, @letter-spacing: 0.04em);
+  }
+}

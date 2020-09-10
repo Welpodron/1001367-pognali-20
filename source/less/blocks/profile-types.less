@@ -1,14 +1,57 @@
-.profile-types__link {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1;
+.profile-types {
+  position: relative;
 
-  @media (min-width: 768px) {
-    font-size: 20px;
+  &::after {
+    position: absolute;
+    z-index: 1;
+
+    content: "";
+
+    .set-background(@color: @basic-gray-light);
+    .set-block-size(@width: 100%, @height: 30px);
+    .set-border-radius(@br: 30px, @bl: 30px);
   }
 
-  @media (min-width: 1440px) {
-    //
+  @media (min-width: @tablet-width) {
+    &::after {
+      .set-block-size(@height: 60px);
+      .set-border-radius(@br: 60px, @bl: 60px);
+    }
+  }
+}
+
+.profile-types__title {
+  /*
+  Добавлена минимальная высота
+  (требуется для того, чтобы декоративный элемент при ресайзе экрана (начиная с 613 px) не выходил за пределы блока)
+  *Данный фикс не требуется на планшетной версии и актуален лишь при ресайзе экрана с 613px до 768px*
+  */
+  .set-block-size(@min-height: 48px);
+  .set-margin(@b: 43px);
+  .set-padding(@r: 50%, @l: 25px);
+
+  @media (min-width: @tablet-width) {
+    .set-block-size(@min-height: auto);
+    .set-font(@text-align: center);
+    .set-margin(@b: 76px);
+    .set-padding(@r: 0, @l: 0);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / span 4;
+    .set-margin(@b: 136px);
+  }
+}
+
+.profile-types__wrapper {
+  .set-padding(@t: 51px, @b: 8px);
+
+  @media (min-width: @tablet-width) {
+    .set-padding(@t: 71px, @b: 0);
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-padding(@t: 103px, @b: 0);
   }
 }
 
@@ -16,27 +59,56 @@
   display: none;
 }
 
-.profile-types {
-  outline: 5px solid fade(blue, 50%);
-  padding: 0 25px;
+.profile-types__rates-list {
+  .set-margin(@t: 0, @b: 32px);
 
-  @media (min-width: 768px) {
-    padding: 0 40px;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 0 60px;
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / span 3;
   }
 }
 
-.profile-types__wrapper {
-  outline: 5px solid fade(blue, 50%);
+.profile-types__link {
+  display: inline-flex;
+  justify-content: center;
 
-  @media (min-width: 768px) {
-    padding: 0 36px;
-  }
+  .set-block-size(@width: 100%);
+  .set-font(@font-weight: bold, @line-height: 1, @color: @blue-deep);
 
-  @media (min-width: 1440px) {
-    padding: 0 70px;
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    .set-block-size(@width: auto, @max-width: 450px);
+    .set-font(@font-size: 20px);
+
+    &::before {
+      flex-shrink: 0;
+
+      content: "";
+
+      .set-background(@color: @basic-gray);
+      .set-block-size(@width: 68px, @height: 68px);
+      .set-border-radius(@all: 50%);
+      .set-margin(@r: 21px);
+    }
+
+    &::after {
+      position: absolute;
+
+      content: "";
+
+      .set-block-size(@width: 19px, @height: 21px);
+      .set-position(@l: calc(68px / 2 - 19px / 2));
+      .set-sprite-background(19px, 21px, @icon-business-spd);
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-column: 1 / span 2;
+      justify-self: flex-start;
+      .set-block-size(@max-width: 100%);
+      .set-margin(@l: 71px);
+    }
   }
 }

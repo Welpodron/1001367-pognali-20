@@ -1,0 +1,246 @@
+.form-calendar__month {
+  .set-font(@font-weight: bold, @font-size: 20px, @line-height: 1, @color: @basic-blue-light);
+  .set-padding(@all: 0);
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 36px);
+  }
+}
+
+.form-calendar__day {
+  display: block;
+
+  .set-font(@text-align: center);
+  .set-padding(@all: 0);
+
+  &--weekend {
+    .set-font(@color: @basic-orange);
+  }
+
+  @media (min-width: @tablet-width) {
+    &--monday {
+      &::after {
+        content: "н";
+      }
+    }
+
+    &--tuesday {
+      &::after {
+        content: "т";
+      }
+    }
+
+    &--wednesday {
+      &::after {
+        content: "р";
+      }
+    }
+
+    &--thursday {
+      &::after {
+        content: "т";
+      }
+    }
+
+    &--friday {
+      &::after {
+        content: "т";
+      }
+    }
+
+    &--saturday {
+      &::after {
+        content: "б";
+      }
+    }
+
+    &--sunday {
+      &::after {
+        content: "с";
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-font(@text-align: left);
+    .set-padding(@r: 18px, @l: 18px);
+  }
+}
+
+.form-calendar {
+  display: block;
+}
+
+.form-calendar__control {
+  .set-padding(@all: 0);
+}
+
+.form-calendar__controls {
+  display: grid;
+
+  grid-template-columns: min-content 1fr min-content;
+}
+
+.form-calendar__head {
+  display: block;
+
+  .set-border(@t: 1px solid @basic-gray-dark-2, @b: 1px solid @basic-gray-dark-2);
+  .set-margin(@b: 21px);
+  .set-padding(@t: 9px, @b: 12px);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 38px);
+    .set-padding(@t: 24px, @b: 25px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-margin(@b: 16px);
+  }
+}
+
+.form-calendar__body {
+  display: block;
+}
+
+.form-calendar__dates {
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.form-calendar__days {
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+  .set-font(@font-size: 14px, @line-height: 18px, @color: @special-grey);
+  .set-margin(@b: 10px);
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 18px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-margin(@b: 22px);
+  }
+}
+
+.form-calendar__date {
+  display: block;
+
+  .set-margin(@t: -1px, @r: -1px);
+  .set-padding(@all: 0);
+}
+
+.form-calendar__toggle {
+  position: relative;
+
+  .set-background(@color: transparent);
+  .set-block-size(@width: 18px, @height: 100%);
+  .set-border(@all: none);
+  .set-padding(@all: 0);
+
+  &::before {
+    position: absolute;
+
+    content: "";
+    transform: rotate(-40deg);
+
+    .set-background(@color: tomato);
+    .set-block-size(@width: 2px, @height: 12px);
+    .set-border-radius(@all: 2px);
+    .set-position(@l: 3px, @b: -1px);
+  }
+
+  &::after {
+    position: absolute;
+
+    content: "";
+    transform: rotate(40deg);
+
+    .set-background(@color: tomato);
+    .set-block-size(@width: 2px, @height: 12px);
+    .set-border-radius(@all: 2px);
+    .set-position(@l: 3px, @t: -1px);
+  }
+}
+
+.form-calendar__input-option:disabled + .form-calendar__button {
+  .set-background(@color: transparent);
+  .set-border(@all: 1px solid @basic-gray-dark-2);
+  .set-font(@font-weight: normal, @color: fade(@special-grey, 30%));
+}
+
+.form-calendar__input-option:checked + .form-calendar__button {
+  .set-background(@color: @basic-blue-light);
+  .set-font(@color: @basic-white);
+}
+
+.form-calendar__button {
+  position: relative;
+  display: block;
+
+  .set-background(@color: @basic-gray-light);
+  .set-border(@all: 1px solid @basic-gray-light-3);
+  .set-font(@font-weight: @medium, @font-size: 14px, @line-height: 18px, @color: @basic-blue-light, @text-align: center);
+  .set-padding(@all: 0);
+  .set-padding(@t: 6px, @b: 6px);
+
+  &--checked {
+    .set-background(@color: @basic-blue-light);
+    .set-font(@color: @basic-white);
+  }
+
+  &--hover {
+    z-index: 1;
+
+    outline: 2px solid @basic-orange;
+    outline-offset: -2px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 18px);
+    .set-padding(@t: 23px, @r: 10px, @b: 27px, @l: 10px);
+
+    &--hover {
+      outline: 4px solid @basic-orange;
+      outline-offset: -4px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+
+    row-gap: 8px;
+    .set-font(@font-weight: normal, @text-align: left);
+    .set-padding(@t: 12px, @r: 15px, @b: 13px, @l: 15px);
+
+    &--hover {
+      outline-offset: -3px;
+    }
+
+    &::after {
+      content: "";
+      .set-font(@line-height: 20px);
+      .set-block-size(@min-height: 20px);
+    }
+
+    &--arrival::after,
+    &--departure::after {
+      content: attr(name);
+    }
+  }
+}
+
+.form-calendar__button:disabled {
+  .set-background(@color: transparent);
+  .set-border(@all: 1px solid @basic-gray-dark-2);
+  .set-font(@font-weight: normal, @color: fade(@special-grey, 30%));
+}
+
+.form-calendar__new-month {
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: " " attr(data-month);
+    }
+  }
+}

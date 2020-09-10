@@ -1,0 +1,50 @@
+.range-slider {
+  position: relative;
+
+  .set-background(@color: fade(@basic-blue-light, 20%));
+  .set-block-size(@width: 100%, @height: 2px);
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    .set-block-size(@width: 280px);
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-block-size(@height: 3px);
+    .set-border-radius(@all: 2px);
+  }
+}
+
+.range-slider__button {
+  position: absolute;
+
+  .reset-button();
+  .set-background(@color: @basic-blue-light);
+  .set-block-size(@width: 10px, @height: 10px);
+  .set-border-radius(@all: 50%);
+  .set-position(@t: calc(-10px / 2 + 2px / 2));
+
+  &:first-of-type {
+    .set-position(@l: calc(30%));
+  }
+
+  &:last-of-type {
+    .set-position(@l: calc(100% - 10px));
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-block-size(@width: 13px, @height: 13px);
+    .set-position(@t: calc(-13px / 2 + 3px / 2));
+
+    &:first-of-type {
+      .set-position(@l: calc(30% - 13px));
+    }
+  }
+}
+
+.range-slider__active-bar {
+  position: absolute;
+
+  .set-background(@color: @basic-blue-light);
+  .set-block-size(@width: calc(100% - 30%), @height: 100%);
+  .set-position(@l: calc(30%));
+}

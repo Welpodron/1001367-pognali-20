@@ -1,0 +1,115 @@
+.form-my-plans {
+  .set-background(@color: @basic-gray-2);
+  .set-border-radius(@tl: 30px, @tr: 30px);
+}
+
+.form-my-plans__wrapper {
+  .set-padding(@t: 25px, @b: 30px);
+
+  @media (min-width: @tablet-width) {
+    .set-padding(@t: 54px, @b: 77px);
+  }
+}
+
+.form-my-plans__title {
+  .set-font(@font-size: 24px, @line-height: 1, @color: @basic-blue-light);
+  .set-margin(@t: 0, @b: 32px);
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 36px);
+    .set-padding(@r: 35px, @l: 35px);
+    .set-margin(@t: 0, @b: 51px);
+  }
+}
+
+.form-my-plans__list {
+  display: grid;
+
+  counter-reset: form-my-plans__item--index;
+
+  .reset-list();
+  row-gap: 10px;
+  .set-font(@color: @basic-blue-light);
+
+  @media (min-width: @tablet-width) {
+    .set-padding(@r: 35px, @l: 35px);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: ~"1 / -1";
+  }
+}
+
+.form-my-plans__item {
+  .set-background(@color: @basic-white);
+  .set-border-radius(@all: 10px);
+  .set-padding(@t: 23px, @r: 25px, @b: 22px, @l: 25px);
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .set-padding(@t: 38px, @r: 36px, @b: 17px, @l: 36px);
+  }
+}
+
+.form-my-plans__route {
+  .set-font(@font-size: 16px, @line-height: 1);
+  .set-margin(@t: 0, @b: 20px);
+
+  &::before {
+    content: counter(form-my-plans__item--index) ". ";
+    counter-increment: form-my-plans__item--index;
+
+    .set-font(@font-weight: @medium);
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .set-block-size(@width: 100%);
+    .set-font(@font-size: 24px);
+    .set-margin(@b: 53px);
+
+    &::before {
+      .set-font(@font-size: 20px, @line-height: 20px);
+    }
+  }
+}
+
+.form-my-plans__companions,
+.form-my-plans__time,
+.form-my-plans__link {
+  .set-font(@font-weight: @medium, @font-size: 14px, @line-height: 1, @text-transform: uppercase, @letter-spacing: 0.06em);
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 20px, @letter-spacing: 0.1em);
+  }
+}
+
+.form-my-plans__companions {
+  .set-margin(@t: 0, @b: 6px);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 0);
+  }
+}
+
+.form-my-plans__time {
+  .set-margin(@t: 0, @b: 21px);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 0);
+    .set-font(@letter-spacing: 0.06em);
+  }
+}
+
+.form-my-plans__link {
+  .set-font(@letter-spacing: 0.03em, @color: fade(@basic-black, 30%));
+
+  @media (min-width: @tablet-width) {
+    .set-font(@letter-spacing: 0.1em);
+  }
+}

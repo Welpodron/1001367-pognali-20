@@ -1,73 +1,124 @@
 .rates-list {
-  padding-right: 45px;
-
-  font-weight: @light;
-  font-size: 16px;
-  line-height: 1;
+  position: relative;
 
   counter-reset: rates-list__item-index;
 
-  @media (min-width: 768px) {
-    font-size: 28px;
+  .set-font(@font-weight: @light, @line-height: 1);
+  .set-margin(@t: 0, @b: 0);
+  .set-padding(@r: 32px, @l: 24px);
+
+  &::before {
+    position: absolute;
+
+    content: "";
+
+    .set-background(@image: url("../../img/rates@1x.png"), @size: cover, @position: center);
+    .set-block-size(@width: 100px, @height: 100px);
+    .set-position(@r: 0, @b: calc(100% + 30px));
+  }
+
+  @media (min-resolution: @dpr2) {
+    &::before {
+      .set-background(@image: url("../../img/rates@2x.png"));
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-padding(@r: 34px, @l: calc(68px + 22px));
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+
+      content: "";
+
+      .set-background(@color: @basic-gray);
+      .set-block-size(@width: 198px, @height: calc(100% + 86px));
+      .set-border-radius(@all: 20px);
+      .set-position(@t: calc(-80px / 2), @r: 0);
+    }
+
+    &::before {
+      z-index: 2;
+
+      .set-position(@t: calc(100% + 19px), @r: calc(198px / 2 - 54px));
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 28px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-padding(@r: 0, @l: calc(68px + 92px));
+
+    &::before {
+      .set-block-size(@width: 198px, @height: 198px);
+      .set-position(@t: calc(50% - 198px / 2 + 3px), @r: calc(-198px - 74px));
+    }
+
+    &::after {
+      .set-block-size(@width: 446px, @height: calc(100% + 101px));
+      .set-position(@t: calc(-101px / 2 + 1px), @r: -160px);
+    }
+  }
+}
+
+.rates-list__price {
+  .set-margin(@l: 0);
+}
+
+.rates-list__feature {
+  .set-margin(@b: 6px);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 0);
   }
 }
 
 .rates-list__item {
   position: relative;
 
-  padding-top: 13px;
-  padding-bottom: 15px;
-
-  border-top: 1px solid #e1e3e9;
+  .set-border(@t: 1px solid @athens-gray);
+  .set-padding(@t: 13px, @b: 13px);
 
   &:last-of-type {
-    border-bottom: 1px solid #e1e3e9;
+    .set-border(@b: 1px solid @athens-gray);
   }
 
   &::after {
-    content: counter(rates-list__item-index);
     position: absolute;
-    top: 0;
-    left: calc(100% + 10px);
 
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 34px;
-    height: 34px;
+    display: grid;
 
-    font-weight: normal;
-    color: #ffffff;
-
-    background-color: #ff8d30;
-    border-radius: 50%;
-
+    content: counter(rates-list__item-index);
     counter-increment: rates-list__item-index;
+
+    place-items: center;
+    .set-background(@color: @special-orange);
+    .set-block-size(@width: 34px, @height: 34px);
+    .set-border-radius(@all: 50%);
+    .set-font(@font-weight: normal, @color: @basic-white);
+    .set-position(@t: 3px, @l: calc(100% - 3px));
   }
 
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
+  &:nth-of-type(2n)::after {
+    .set-background(@color: @special-yellow-dark);
+  }
+
+  &:nth-of-type(3n)::after {
+    .set-background(@color: @basic-yellow);
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+    .set-padding(@t: 18px, @b: 19px);
 
     &::after {
-      top: 0;
-      left: 0;
-
-      width: 68px;
-      height: 68px;
+      .set-block-size(@width: 68px, @height: 68px);
+      .set-position(@t: -2px, @l: calc(-68px - 22px));
     }
-  }
-}
-
-.rates-list__feature {
-  margin-bottom: 6px;
-}
-
-.rates-list__price {
-  margin-left: 0;
-
-  @media (min-width: 768px) {
-    text-align: right;
   }
 }

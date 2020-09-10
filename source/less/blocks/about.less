@@ -1,71 +1,104 @@
-.about__description {
-  font-weight: @light;
-  font-size: 16px;
-  line-height: 22px;
-
-  @media (min-width: 768px) {
-    font-size: 28px;
-    line-height: 33px;
-  }
-
-  @media (min-width: 1440px) {
-    line-height: 34px;
-  }
-}
-
-.about__slogan {
-  font-size: 16px;
-  line-height: 22px;
-
-  @media (min-width: 768px) {
-    font-size: 21px;
-    line-height: 25px;
-  }
-
-  @media (min-width: 1440px) {
-    line-height: 24px;
-  }
-}
-
-// ПАДДИНГИ ДЛЯ СЕКЦИЙ МОЖНО БУДЕТ ВЫНЕСТИ КАЖДОЙ СЕКЦИИ В PAGE MAIN
-
 .about {
-  padding: 0 25px;
+  .set-border-radius(@br: 30px, @bl: 30px);
 
-  background-image: url(../../img/about-mobile@1x.png);
-
-  @media (min-width: 768px) {
-    padding: 0 40px;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 0 60px;
+  @media (min-width: @tablet-width) {
+    .set-border-radius(@br: 60px, @bl: 60px);
   }
 }
 
 .about__wrapper {
-  @media (min-width: 768px) {
-    padding: 0 36px;
+  .set-padding(@t: 31px, @b: 83px);
+
+  @media (min-width: @tablet-width) {
+    .set-padding(@t: 133px, @b: 89px);
   }
 
-  @media (min-width: 1440px) {
-    padding: 0 70px;
+  @media (min-width: @desktop-width) {
+    .set-padding(@t: 129px, @b: 0);
   }
 }
 
 .about__header {
-  padding: 0 25px;
+  padding: 0 35px 0 24px;
 
-  @media (min-width: 768px) {
-    width: 50%;
+  @media (min-width: @tablet-width) {
+    margin: 0 0 54px 0;
+    padding: 0 51% 0 35px;
+  }
+
+  @media (min-width: @desktop-width) {
     padding: 0;
+
+    grid-column: ~"1 / 3";
+    .set-padding(@r: 0, @l: 70px);
+  }
+}
+
+.about__title {
+  .set-margin(@b: 20px);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 41px);
+  }
+}
+
+.about__subtitle {
+  .set-margin(@b: 19px);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 32px);
   }
 }
 
 .about__button {
   display: none;
 
-  @media (min-width: 768px) {
-    display: inline;
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 24px;
+
+    position: relative;
+    z-index: 2;
+
+    display: inline-grid;
+    align-items: center;
+
+    margin: 0 0 0 34px;
+    padding: 27px 35px 29px 33px;
+
+    color: #1d2e5b;
+    border-radius: 20px;
+    background: #ffd74b;
+
+    column-gap: 0.9em;
+    grid-template-columns: minmax(auto, 175px) min-content;
+
+    &::after {
+      flex-shrink: 0;
+
+      width: 14px;
+      height: 14px;
+
+      content: "";
+
+      .set-sprite-background(14px, 14px, @utils-triangle-arrow-right);
+    }
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+
+    grid-column: ~"1 / 3";
+  }
+}
+
+.about__mobile-br {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.about__tablet-br {
+  display: none;
 }

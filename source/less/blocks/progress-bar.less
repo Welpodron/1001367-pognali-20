@@ -1,0 +1,18 @@
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+
+  .reset-list();
+  .set-block-size(@width: 50px);
+  .set-font(@font-size: 0);
+}
+
+.progress-bar__item {
+  .set-background(@color: fade(@basic-blue-light, 30%));
+  .set-block-size(@width: 5px, @height: 5px);
+  .set-border-radius(@all: 50%);
+
+  &--active {
+    .set-background(@color: @basic-blue-light);
+  }
+}

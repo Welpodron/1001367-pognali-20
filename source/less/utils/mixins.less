@@ -1,5 +1,18 @@
-.font
-  (@font-size: none, @line-height: none, @font-weight: none, @color: none, @font-style: none) {
+.fieldset-reset() {
+  // margin: 0;
+  // border: none;
+  // padding: 0;
+}
+
+.set-font(@font-style: none, @font-weight: none, @font-size: none, @line-height: none, @color: none, @text-align: none, @text-transform: 0, @letter-spacing: none, @text-decoration: 0, @font: none) {
+  & when not (@font-style = none) {
+    font-style: @font-style;
+  }
+
+  & when not (@font-weight = none) {
+    font-weight: @font-weight;
+  }
+
   & when not (@font-size = none) {
     font-size: @font-size;
   }
@@ -8,21 +21,230 @@
     line-height: @line-height;
   }
 
-  & when not (@font-weight = none) {
-    font-weight: @font-weight;
-  }
-
   & when not (@color = none) {
     color: @color;
   }
 
-  & when not (@font-style = none) {
-    font-style: @font-style;
+  & when not (@text-align = none) {
+    text-align: @text-align;
+  }
+
+  & when not (@text-transform = 0) {
+    text-transform: @text-transform;
+  }
+
+  & when not (@letter-spacing = none) {
+    letter-spacing: @letter-spacing;
+  }
+
+  & when not (@text-decoration = 0) {
+    text-decoration: @text-decoration;
+  }
+
+  & when not (@font = none) {
+    font: @font;
   }
 }
 
-.list-reset () {
-  margin: 0;
-  padding: 0;
+.set-circle-level(@radius, @percent, @offset: 4px, @rotate: -90deg) {
+  transform: rotate(@rotate);
+  stroke-dashoffset: calc((@radius * 2 * pi()) - (@percent / 100 * @radius * 2 * pi()) + @offset);
+  stroke-dasharray: calc(@radius * 2 * pi());
+}
+
+.set-block-size(@width: none, @height: none, @min-width: none, @min-height: none, @max-width: none, @max-height: none) {
+  & when not (@width = none) {
+    width: @width;
+  }
+
+  & when not (@height = none) {
+    height: @height;
+  }
+
+  & when not (@min-width = none) {
+    min-width: @min-width;
+  }
+
+  & when not (@min-height = none) {
+    min-height: @min-height;
+  }
+
+  & when not (@max-width = none) {
+    max-width: @max-width;
+  }
+
+  & when not (@max-height = none) {
+    max-height: @max-height;
+  }
+}
+
+.set-position(@t: none, @r: none, @b: none, @l: none) {
+  & when not (@t = none) {
+    top: @t;
+  }
+
+  & when not (@r = none) {
+    right: @r;
+  }
+
+  & when not (@b = none) {
+    bottom: @b;
+  }
+
+  & when not (@l = none) {
+    left: @l;
+  }
+}
+
+.set-padding(@t: none, @r: none, @b: none, @l: none, @all: none) {
+  & when not (@t = none) {
+    padding-top: @t;
+  }
+
+  & when not (@r = none) {
+    padding-right: @r;
+  }
+
+  & when not (@b = none) {
+    padding-bottom: @b;
+  }
+
+  & when not (@l = none) {
+    padding-left: @l;
+  }
+
+  & when not (@all = none) {
+    padding-top: @all;
+    padding-right: @all;
+    padding-bottom: @all;
+    padding-left: @all;
+  }
+}
+
+.set-border(@t: 0, @r: 0, @b: 0, @l: 0, @all: 0) {
+  & when not (@t = 0) {
+    border-top: @t;
+  }
+
+  & when not (@r = 0) {
+    border-right: @r;
+  }
+
+  & when not (@b = 0) {
+    border-bottom: @b;
+  }
+
+  & when not (@l = 0) {
+    border-left: @l;
+  }
+
+  & when not (@all = 0) {
+    border-top: @all;
+    border-right: @all;
+    border-bottom: @all;
+    border-left: @all;
+  }
+}
+
+.set-margin(@t: none, @r: none, @b: none, @l: none, @all: none) {
+  & when not (@t = none) {
+    margin-top: @t;
+  }
+
+  & when not (@r = none) {
+    margin-right: @r;
+  }
+
+  & when not (@b = none) {
+    margin-bottom: @b;
+  }
+
+  & when not (@l = none) {
+    margin-left: @l;
+  }
+
+  & when not (@all = none) {
+    margin-top: @all;
+    margin-right: @all;
+    margin-bottom: @all;
+    margin-left: @all;
+  }
+}
+
+.set-border-radius(@tl: none, @tr: none, @br: none, @bl: none, @all: none) {
+  & when not (@tl = none) {
+    border-top-left-radius: @tl;
+  }
+
+  & when not (@tr = none) {
+    border-top-right-radius: @tr;
+  }
+
+  & when not (@br = none) {
+    border-bottom-right-radius: @br;
+  }
+
+  & when not (@bl = none) {
+    border-bottom-left-radius: @bl;
+  }
+
+  & when not (@all = none) {
+    border-top-left-radius: @all;
+    border-top-right-radius: @all;
+    border-bottom-right-radius: @all;
+    border-bottom-left-radius: @all;
+  }
+}
+
+.set-background(@color: none, @image: none, @size: none, @position: none, @repeat: none) {
+  & when not (@color = none) {
+    background-color: @color;
+  }
+
+  & when not (@image = none) {
+    background-image: @image;
+  }
+
+  & when not (@size = none) {
+    background-size: @size;
+  }
+
+  & when not (@position = none) {
+    background-position: @position;
+  }
+
+  & when not (@repeat = none) {
+    background-repeat: @repeat;
+  }
+}
+
+.set-sprite-background(@width, @height, @index, @url: url("../../img/sprite/sprite.svg")) {
+  @condition: boolean(@width >= @height);
+  @condition-size: if((@condition), 100%, @height auto);
+  @condition-position: if((@condition), center calc(-1 * @width * @index - ((@width - @height) / 2)), center calc(-1 * @height * @index));
+
+  .set-background(@image: @url, @size: @condition-size, @position: @condition-position, @repeat: no-repeat);
+}
+
+.reset-list() {
+  .set-margin(@t: 0, @b: 0);
+  .set-padding(@l: 0);
+
   list-style: none;
+}
+
+.reset-fieldset() {
+  .set-margin(@r: 0, @l: 0);
+  .set-padding(@all: 0);
+  .set-border(@all: none);
+}
+
+.reset-button() {
+  .set-border(@all: none);
+  .set-padding(@all: 0);
+  .set-background(@color: transparent);
+}
+
+.reset-a() {
+  .set-font(@color: inherit, @text-decoration: none);
 }

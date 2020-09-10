@@ -1,0 +1,30 @@
+.button-simple {
+  position: relative;
+  .set-padding(@l: 30px);
+  .set-font(@font-weight: bold, @font-size: 17px, @line-height: 30px, @color: @basic-blue-light, @text-transform: uppercase);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    .set-background(@color: @basic-blue-light);
+    .set-border-radius(@all: 4px);
+    .set-block-size(@width: 18px, @height: 2px);
+    .set-position(@l: -3px, @t: calc(50% - 2px / 2));
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 20px, @line-height: 20px);
+    .set-padding(@l: 43px);
+
+    &::before,
+    &::after {
+      .set-block-size(@width: 26px);
+      .set-position(@l: -7px);
+    }
+  }
+}

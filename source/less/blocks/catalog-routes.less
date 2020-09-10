@@ -1,0 +1,106 @@
+.catalog-routes {
+  position: relative;
+
+  display: grid;
+
+  gap: 10px;
+  grid-column: ~"1 / -1";
+  .reset-list();
+  .set-border(@t: 1px solid @basic-gray-light);
+  .set-font(@font-weight: @medium, @font-size: 15px, @line-height: 16px, @color: @basic-blue-light, @text-transform: uppercase);
+  .set-margin(@b: 12px);
+  .set-padding(@r: 25px, @l: 25px);
+
+  &::before {
+    content: "хочет посетить:";
+
+    justify-self: flex-start;
+    .set-background(@color: @basic-white);
+    .set-font(@font-weight: normal, @color: @special-grey, @text-transform: none);
+    .set-margin(@t: -9px, @b: 9px, @l: -11px);
+    .set-padding(@r: 10px, @l: 11px);
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-row: 4;
+    grid-template-columns: repeat(3, fit-content(208px));
+    column-gap: 25px;
+    row-gap: 20px;
+    .set-border(@t: none);
+    .set-font(@font-size: 20px, @line-height: 20px);
+    .set-margin(@t: 0, @b: 0);
+    .set-padding(@t: 20px, @r: 0, @l: 0);
+
+    &::before {
+      z-index: 1;
+
+      grid-column: ~"1 / -1";
+      .set-font(@font-size: 15px, @line-height: 16px);
+      // .set-block-size(@width: 118px);
+      .set-margin(@t: 0, @b: 0, @l: 36px);
+      .set-padding(@b: 0, @l: 12px);
+    }
+
+    &::after {
+      position: absolute;
+
+      content: "";
+
+      .set-background(@color: tomato);
+      .set-block-size(@width: calc(100% + 35px + 25px), @height: 1px);
+      .set-position(@t: calc(13px + 15px), @l: -35px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: ~"1 / -2 / 3 / -1";
+    grid-template-columns: auto;
+    row-gap: 13px;
+    .set-padding(@t: 50px);
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.catalog-routes__item {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+
+    .set-block-size(@width: 26px, @height: 18px);
+    .set-margin(@r: 14px);
+  }
+
+  &--sri-lanka::before {
+    .set-sprite-background(@width: 26px, @height: 18px, @index: @flag-sri-lanka);
+  }
+
+  &--thailand::before {
+    .set-sprite-background(@width: 26px, @height: 18px, @index: @flag-thailand);
+  }
+
+  &--seychelles::before {
+    .set-sprite-background(@width: 26px, @height: 18px, @index: @flag-seychelles);
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      .set-block-size(@width: 35px, @height: 24px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      .set-margin(@r: 18px);
+    }
+  }
+}

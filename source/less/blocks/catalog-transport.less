@@ -1,0 +1,44 @@
+.catalog-transport {
+  display: grid;
+
+  grid-template-columns: repeat(4, 32px);
+  grid-template-rows: min-content auto;
+  .reset-list();
+  row-gap: 9px;
+  .set-block-size(@width: auto);
+  .set-margin(@l: 7px);
+
+  &::before {
+    content: "транспорт:";
+
+    grid-column: ~"1 / -1";
+    justify-self: start;
+    .set-background(@color: @basic-white);
+    .set-font(@font-size: 15px, @line-height: 16px, @color: @special-grey);
+    .set-margin(@l: -7px);
+    .set-padding(@r: 10px, @l: 12px);
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    row-gap: 0;
+    .set-margin(@b: 7px, @l: 0);
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 32px);
+  }
+}
+
+.catalog-transport__item {
+  align-self: center;
+
+  .set-background(@color: @basic-gray-light);
+  .set-block-size(@width: 32px, @height: 32px);
+  .set-border-radius(@all: 50%);
+}

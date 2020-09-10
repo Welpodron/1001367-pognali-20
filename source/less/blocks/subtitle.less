@@ -1,14 +1,8 @@
 .subtitle {
-  font-weight: @light;
-  font-size: 16px;
-  line-height: 22px;
+  .set-font(@font-weight: @light, @line-height: 22px);
+  .set-margin(@t: 0);
 
-  @media (min-width: 768px) {
-    font-size: 28px;
-    line-height: 33px;
-  }
-
-  @media (min-width: 1440px) {
-    //
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 28px, @line-height: 33px);
   }
 }

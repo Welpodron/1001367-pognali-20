@@ -1,32 +1,22 @@
 .catalog-companions {
-  outline: 5px solid fade(green, 50%);
-  outline-offset: -5px;
+  word-break: break-word;
+}
 
-  padding: 0 25px;
+.catalog-companions__companions-list {
+  .set-margin(@b: 18px);
 
-  @media (min-width: 768px) {
-    padding: 0 40px;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 0;
-    padding-right: 25px;
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 48px);
   }
 }
 
-.catalog-companions__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  outline: 5px solid fade(red, 50%);
-  outline-offset: -5px;
-}
+.catalog-companions__button {
+  display: grid;
 
-.catalog-companions__item {
-  @media (min-width: 1440px) {
-    display: flex;
+  place-items: center;
+  .set-margin(@b: 20px);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 55px);
   }
-}
-
-.catalog-companions__wrapper {
 }

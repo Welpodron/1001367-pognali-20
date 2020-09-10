@@ -1,59 +1,179 @@
+.form-plans {
+  @media (min-width: @tablet-width) {
+    .set-padding(@r: 35px, @l: 35px);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: ~"1 / -1";
+    .set-padding(@r: 0, @l: 0);
+  }
+}
+
 .form-plans__section {
   margin: 0;
   margin-bottom: 10px;
   padding: 25px;
 
-  background-color: #ffffff;
   border: none;
   border-radius: 10px;
+  background-color: #ffffff;
+
+  .set-padding(@t: 22px, @b: 23px);
 
   &:last-of-type {
     margin-bottom: 0;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     padding: 0 45px;
 
     border-radius: 30px;
+
+    .set-margin(@b: 39px);
+    .set-padding(@t: 45px, @b: 56px);
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: @desktop-width) {
     padding: 0 160px;
 
     border-radius: 60px;
+
+    .set-padding(@t: 98px, @r: 160px, @b: 0, @l: 160px);
+  }
+}
+
+.form-plans__content {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    clear: both;
+
+    grid-template-columns: 1fr auto;
   }
 }
 
 .form-plans__title {
-  // fix wierd position
-  float: left;
+  .set-font(@font-weight: bold, @font-size: 20px, @line-height: 1, @color: @basic-blue-light);
+  .set-margin(@t: 0, @b: 17px);
 
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1;
-  color: #1d2e5b;
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 36px);
+    .set-margin(@b: 36px);
+  }
 
-  @media (min-width: 768px) {
-    font-size: 36px;
+  @media (min-width: @desktop-width) {
+    .set-margin(@b: 0);
   }
 }
 
-.form-plans__progress-bar {
-  display: none;
+.form-plans__description {
+  .set-font(@font-size: 16px, @line-height: 22px, @color: @special-grey);
+  .set-margin(@t: 0, @b: 0);
 
-  @media (min-width: 1440px) {
-    display: block;
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 20px, @line-height: 24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: flex-end;
   }
 }
 
-.form-plans__desc {
-  clear: both;
+.form-plans__header {
+  .set-margin(@t: 0, @b: 19px);
 
-  font-size: 16px;
-  line-height: 22px;
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 39px);
+  }
 
-  @media (min-width: 768px) {
-    font-size: 20px;
-    line-height: 24px;
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: min-content 1fr;
+    column-gap: 190px;
+  }
+}
+
+.form-plans__progress {
+  @media (min-width: @desktop-width) {
+    grid-area: ~"1 / 2 / -1 / auto";
+  }
+}
+
+.form-plans__fieldset {
+  .reset-fieldset();
+  .set-margin(@b: 22px);
+}
+
+.form-plans__calendar {
+  .set-margin(@b: 22px);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 47px);
+  }
+}
+
+.form-plans__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  .set-block-size(@width: 100%);
+  .set-border-radius(@all: 20px);
+  .set-font(@font-weight: bold, @font-size: 17px, @line-height: 30px, @color: @basic-blue-light, @text-transform: uppercase);
+
+  &--next {
+    .set-background(@color: @basic-yellow);
+    .set-padding(@t: 5px, @r: 20px, @b: 5px, @l: 20px);
+  }
+
+  &--prev {
+    .set-margin(@t: 10px);
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+
+    .set-block-size(@width: auto);
+    .set-font(@font-size: 24px, @line-height: 24px, @text-transform: none);
+
+    &--prev {
+      .set-margin(@all: 0);
+
+      &::before {
+        content: "";
+
+        .set-border(@t: 6px solid transparent, @r: 11px solid  @basic-blue-light, @b: 6px solid transparent);
+        .set-margin(@t: 2px, @r: 20px);
+      }
+    }
+
+    &--next {
+      .set-block-size(@min-width: 284px);
+      .set-padding(@t: 27px, @r: 34px, @b: 29px, @l: 34px);
+
+      &::after {
+        content: "";
+
+        .set-border(@t: 6px solid transparent, @b: 6px solid transparent, @l: 11px solid  @basic-blue-light);
+        .set-margin(@t: 2px, @l: 28px);
+      }
+    }
+  }
+}
+
+.form-plans__routes-list {
+  .set-margin(@b: 26px);
+}
+
+.form-plans__controls {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-plans__title br {
+    display: none;
   }
 }

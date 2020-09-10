@@ -1,0 +1,12 @@
+.list-countries {
+  .reset-list();
+  .set-font(@font-size: 16px, @line-height: 22px, @color: @special-grey);
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 20px, @line-height: 30px);
+  }
+}
+
+.list-countries__link {
+  .reset-a();
+}

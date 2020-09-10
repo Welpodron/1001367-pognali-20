@@ -1,0 +1,120 @@
+.catalog-countries {
+  .reset-list();
+  .set-padding(@r: 27px, @l: 27px);
+  word-break: break-all;
+
+  @media (min-width: @tablet-width) {
+    .set-padding(@r: 0, @l: 0);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    .set-padding(@r: 36px, @l: 36px);
+  }
+}
+
+.catalog-countries__item {
+  @media (max-width: @desktop-width - 1px) {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:nth-of-type(5n + 2) {
+      .set-padding(@l: 2px);
+    }
+
+    &:nth-of-type(5n + 3) {
+      .set-padding(@l: 6px);
+
+      &::before {
+        .set-margin(@l: -4px);
+      }
+    }
+
+    &:nth-of-type(5n + 4) {
+      .set-padding(@l: 7px);
+    }
+
+    &:nth-of-type(5n + 5) {
+      .set-padding(@l: 7px);
+
+      &::before {
+        .set-margin(@l: -4px);
+      }
+    }
+
+    &--first-row {
+      .set-margin(@b: 49px);
+    }
+
+    &--second-row {
+      .set-margin(@b: 45px);
+    }
+
+    &--third-row {
+      .set-margin(@b: 84px);
+    }
+
+    &--fourth-row {
+      .set-margin(@b: 44px);
+    }
+
+    &[data-letter="Г"] {
+      .set-padding(@l: 10px);
+
+      &::before {
+        .set-margin(@l: -6px);
+      }
+    }
+
+    &[data-letter="Д"] {
+      .set-padding(@l: 2px);
+
+      &::before {
+        .set-margin(@l: 2px);
+      }
+    }
+
+    &[data-letter="З"]::before {
+      .set-margin(@b: 30px);
+    }
+
+    &[data-letter="И"]::before {
+      .set-margin(@b: 30px);
+    }
+
+    &[data-letter="М"]::before {
+      .set-margin(@b: 36px);
+    }
+
+    &[data-letter="Э"]::before {
+      .set-margin(@b: 41px);
+    }
+
+    &[data-letter="Ю"] {
+      .set-padding(@l: 10px);
+
+      &::before {
+        .set-margin(@l: -5px);
+      }
+    }
+
+    &::before {
+      display: block;
+      .set-margin(@b: 32px);
+      .set-font(@font-weight: bold, @font-size: 60px, @line-height: 60px, @color: @special-blue-dark, @text-transform: uppercase);
+      content: attr(data-letter);
+    }
+
+    &--fifth-row {
+      &::before {
+        .set-margin(@b: 39px);
+      }
+    }
+  }
+}

@@ -1,277 +1,458 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Academy: Погнали</title>
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
-  <body class="page__body">
-    <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo logo" href="#">
-          <img src="https://via.placeholder.com/150x150" alt="">
-        </a>
-        <nav class="page-header__nav main-nav">
-          <button class="main-nav__toggle js-menu-toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__site-list site-list">
-              <li class="site-list__item">
-                <a class="site-list__link site-list__link--active" href="#">О сервисе</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="form.html">Направления</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="catalog.html">Попутчики</a>
-              </li>
-            </ul>
-            <div class="main-nav__additional-list">
-              <ul class="main-nav__user-list user-list">
-                <li class="user-list__item">
-                  <a class="user-list__button js-login button button--round" href="login.html">Авторизация</a>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <main class="page-main">
+    <form action="https://echo.htmlacademy.ru" method="POST">
+      <section class="form-profile">
+        <h2 class="visually-hidden">Мой профиль:</h2>
+        <div class="form-profile__wrapper wrapper">
+          <div class="form-profile__form">
+            <div class="form-profile__level"></div>
+            <div class="form-profile__image-wrapper">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/users-pics/photo-account-tablet@1x.jpg 1x, img/users-pics/photo-account-tablet@2x.jpg 2x">
+                <img class="form-profile__image" src="img/users-pics/photo-account-mobile@1x.jpg" srcset="img/users-pics/photo-account-mobile@2x.jpg 2x" alt="Фотография Пети Демина">
+              </picture>
+            </div>
+            <input class="visually-hidden" type="file" name="form-profile--avatar" id="form-profile--avatar" accept="image/*">
+            <label class="form-profile__button-photo" for="form-profile--avatar">
+              <span>Фото</span>
+            </label>
+            <div class="form-profile__hashtags">
+              <label class="form-profile__textarea-label" for="form-profile--tags">Тэги</label>
+              <textarea class="form-profile__textarea" name="form-profile--tags" id="form-profile--tags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+            </div>
+            <div class="form-profile__form-transport form-transport">
+              <p class="form-transport__title">Транспорт</p>
+              <ul class="form-transport__list">
+                <li class="form-transport__item">
+                  <input class="form-transport__input-option visually-hidden" type="checkbox" name="form-transport" id="form-transport--air-flight" value="air-flight" checked>
+                  <label class="form-transport__label" for="form-transport--air-flight">
+                    <svg class="form-transport__icon" width="15" height="15">
+                      <use xlink:href="img/sprite/sprite.svg#1D2E5B-transport-plane"></use>
+                    </svg>
+                    <span class="form-transport__name">Авиаперелет</span>
+                  </label>
                 </li>
-              </ul>
-              <ul class="main-nav__contact-list contact-list">
-                <li class="contact-list__item">
-                  <a class="contact-list__link" href="tel:+88005558628">8 800 555-86-28</a>
+                <li class="form-transport__item">
+                  <input class="form-transport__input-option visually-hidden" type="checkbox" name="form-transport" id="form-transport--vehicle" value="vehicle" checked>
+                  <label class="form-transport__label" for="form-transport--vehicle">
+                    <svg class="form-transport__icon" width="15" height="15">
+                      <use xlink:href="img/sprite/sprite.svg#1D2E5B-transport-bus"></use>
+                    </svg>
+                    <span class="form-transport__name">Автотранспорт</span>
+                  </label>
                 </li>
-                <li class="contact-list__item">
-                  <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                <li class="form-transport__item">
+                  <input class="form-transport__input-option visually-hidden" type="checkbox" name="form-transport" id="form-transport--bicycle" value="bicycle">
+                  <label class="form-transport__label" for="form-transport--bicycle">
+                    <svg class="form-transport__icon" width="15" height="15">
+                      <use xlink:href="img/sprite/sprite.svg#1D2E5B-transport-bike"></use>
+                    </svg>
+                    <span class="form-transport__name">Велосипед</span>
+                  </label>
+                </li>
+                <li class="form-transport__item">
+                  <input class="form-transport__input-option visually-hidden" type="checkbox" name="form-transport" id="form-transport--on-foot" value="on-foot" checked>
+                  <label class="form-transport__label" for="form-transport--on-foot">
+                    <svg class="form-transport__icon" width="15" height="15">
+                      <use xlink:href="img/sprite/sprite.svg#1D2E5B-transport-run"></use>
+                    </svg>
+                    <span class="form-transport__name">Пешком</span>
+                  </label>
                 </li>
               </ul>
             </div>
-            <ul class="main-nav__socials socials-list">
-              <li class="socials-list__item">
-                <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-              </li>
-              <li class="socials-list__item">
-                <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-              </li>
-              <li class="socials-list__item">
-                <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-              </li>
-            </ul>
           </div>
-        </nav>
-        <div class="page-header__footer">
-          <h1 class="header__title">Направления</h1>
         </div>
-      </div>
-    </header>
-
-    <main class="page-main">
-
-      <section class="my-plans">
-        <div class="my-plans__wrapper">
-          <h2 class="my-plans__title">Мои планы:</h2>
-          <ol class="my-plans__list">
-            <li class="my-plans__item">
-              <p class="my-plans__route">Франция, Италия</p>
-              <p class="my-plans__companions">3 попутчика</p>
-              <p class="my-plans__time"><time datetime="2020-03-26">26 мар</time> — <time datetime="2020-03-29">29 мар</time></p>
-              <a class="my-plans__link" href="">Изменить</a>
+      </section>
+      <section class="form-my-plans">
+        <div class="form-my-plans__wrapper wrapper">
+          <h2 class="form-my-plans__title">Мои планы:</h2>
+          <ol class="form-my-plans__list">
+            <li class="form-my-plans__item">
+              <h3 class="form-my-plans__route">Франция, Италия</h3>
+              <p class="form-my-plans__companions">3 попутчика</p>
+              <p class="form-my-plans__time"><time datetime="2020-03-26">26 мар</time> — <time datetime="2020-03-29">29 мар</time></p>
+              <a class="form-my-plans__link" href="">Изменить</a>
             </li>
-            <li class="my-plans__item">
-              <p class="my-plans__route">Тайланд, Индонезия</p>
-              <p class="my-plans__companions">1 попутчик</p>
-              <p class="my-plans__time"><time datetime="2020-07-01">1 июл</time> — <time datetime="2020-07-15">15 июл</time></p>
-              <a class="my-plans__link" href="">Изменить</a>
+            <li class="form-my-plans__item">
+              <h3 class="form-my-plans__route">Таиланд, Индонезия</h3>
+              <p class="form-my-plans__companions">1 попутчик</p>
+              <p class="form-my-plans__time"><time datetime="2020-07-01">1 июл</time> — <time datetime="2020-07-15">15 июл</time></p>
+              <a class="form-my-plans__link" href="">Изменить</a>
             </li>
           </ol>
         </div>
       </section>
-
       <section class="plans">
-        <div class="plans__wrapper">
-          <h2 class="plans__title">Добавить план:</h2>
-          <ol class="progress-bar">
-            <li>Даты</li>
-            <li>Маршрут</li>
-            <li>Развлечения</li>
-          </ol>
-
-          <form class="form-plans" action="">
-            <fieldset class="form-plans__section">
-              <legend class="form-plans__title">Шаг 1. Даты пребывания</legend>
-              <p class="form-plans__desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-              <ol class="form-plans__progress-bar progress-bar">
-                <li>Даты</li>
-                <li>Маршрут</li>
-                <li>Развлечения</li>
-              </ol>
-              <label for="quantity">Ищу попутчиков:</label>
-              <input id="quantity" type="number" name="quantity" min="1" value="2">
-              <label for="duration">Длительность:</label>
-              <input id="duration" type="number" name="duration" min="1" value="2">
-              <label><input type="checkbox" name="with-children" value="with-children">Можно с детьми</label>
-
-              <table class="calendar">
-                <thead class="calendar__header">
-                    <tr class="calendar__header-row">
-                        <td>&lt;</td>
-                        <th colspan="5">Март 2019</th>
-                        <td>&gt;</td>
-                    </tr>
-                    <tr class="calendar__header-row">
-                        <td class="calendar__cell">П</td>
-                        <td class="calendar__cell">В</td>
-                        <td class="calendar__cell">С</td>
-                        <td class="calendar__cell">Ч</td>
-                        <td class="calendar__cell">П</td>
-                        <td class="calendar__cell">С</td>
-                        <td class="calendar__cell">В</td>
-                    </tr>
-                </thead>
-                <tbody class="calendar__body">
-                    <tr class="calendar__body-row">
-                        <td class="calendar__cell">23</td>
-                        <td class="calendar__cell">24</td>
-                        <td class="calendar__cell">25</td>
-                        <td class="calendar__cell">26</td>
-                        <td class="calendar__cell">27</td>
-                        <td class="calendar__cell">28</td>
-                        <td class="calendar__cell">1</td>
-                    </tr>
-                    <tr class="calendar__body-row">
-                        <td class="calendar__cell">2</td>
-                        <td class="calendar__cell">3</td>
-                        <td class="calendar__cell">4</td>
-                        <td class="calendar__cell">5</td>
-                        <td class="calendar__cell">6</td>
-                        <td class="calendar__cell">7</td>
-                        <td class="calendar__cell">8</td>
-                    </tr>
-                    <tr class="calendar__body-row">
-                        <td class="calendar__cell">9</td>
-                        <td class="calendar__cell">10</td>
-                        <td class="calendar__cell">11</td>
-                        <td class="calendar__cell">12</td>
-                        <td class="calendar__cell">13</td>
-                        <td class="calendar__cell">14</td>
-                        <td class="calendar__cell">15</td>
-                    </tr>
-                    <tr class="calendar__body-row">
-                        <td class="calendar__cell">16</td>
-                        <td class="calendar__cell">17</td>
-                        <td class="calendar__cell">18</td>
-                        <td class="calendar__cell">19</td>
-                        <td class="calendar__cell">20</td>
-                        <td class="calendar__cell">21</td>
-                        <td class="calendar__cell">22</td>
-                    </tr>
-                    <tr class="calendar__body-row">
-                        <td class="calendar__cell">23</td>
-                        <td class="calendar__cell">24</td>
-                        <td class="calendar__cell">25</td>
-                        <td class="calendar__cell">26</td>
-                        <td class="calendar__cell">27</td>
-                        <td class="calendar__cell">28</td>
-                        <td class="calendar__cell">29</td>
-                    </tr>
-                    <tr class="calendar__body-row">
-                        <td class="calendar__cell">30</td>
-                        <td class="calendar__cell">31</td>
-                        <td class="calendar__cell">1</td>
-                        <td class="calendar__cell">2</td>
-                        <td class="calendar__cell">3</td>
-                        <td class="calendar__cell">4</td>
-                        <td class="calendar__cell">5</td>
-                    </tr>
-                </tbody>
-              </table>
-              <a href="#">Следующий шаг</a>
-            </fieldset>
-
-            <fieldset class="form-plans__section">
-              <legend class="form-plans__title">Шаг 2. Маршрут</legend>
-              <p class="form-plans__desc">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
-              <ol class="form-plans__progress-bar progress-bar">
-                <li>Даты</li>
-                <li>Маршрут</li>
-                <li>Развлечения</li>
-              </ol>
-              <!-- Сделать два списка??? -->
-              <ul>
-                <li>
-                  <div class="input-group">
-                    <input type="text" placeholder="Выберите страну">
-                    <button>
-                      <span>w</span>
-                    </button>
+        <div class="plans__wrapper wrapper">
+          <header class="plans__header">
+            <h2 class="plans__title">Добавить план:</h2>
+            <ol class="plans__progress-bar progress-bar">
+              <li class="progress-bar__item progress-bar__item--active">Даты</li>
+              <li class="progress-bar__item">Маршрут</li>
+              <li class="progress-bar__item">Развлечения</li>
+            </ol>
+          </header>
+          <div class="form-plans">
+            <section id="form-plans__section--01" class="form-plans__section">
+              <header class="form-plans__header">
+                <h3 class="form-plans__title">Шаг 1. <br>Даты пребывания</h3>
+                <p class="form-plans__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                <ol class="form-plans__progress progress-steps">
+                  <li class="progress-steps__item progress-steps__item--active">Даты</li>
+                  <li class="progress-steps__item">Маршрут</li>
+                  <li class="progress-steps__item">Развлечения</li>
+                </ol>
+              </header>
+              <fieldset class="form-plans__fieldset form-routes-planing">
+                <div class="form-routes-planing__input-group">
+                  <div class="form-number form-number--quantity">
+                    <label class="form-number__label" for="quantity">Ищу попутчиков:</label>
+                    <div class="form-number__group">
+                      <input class="form-number__input" id="quantity" name="quantity" type="number" min="1" value="2">
+                      <button class="form-number__button form-number__button--decrement" type="button" aria-label="Уменьшить число попутчиков на 1"></button>
+                      <button class="form-number__button form-number__button--increment" type="button" aria-label="Увеличить число попутчиков на 1"></button>
+                    </div>
                   </div>
-                  <img src="" alt="">
-                  <button class="button__close">
-                    <span>&#10005;</span>
-                  </button>
-                </li>
-                <li>
-              <!-- Инпуту нужно добавить батон который делает ресет -->
-                  <input id="" type="text" name="" placeholder="Выберите страну">
-              <!-- Див отвечающий за выпадающий список стран при вводе, как только полозователь начинает вводить js
-              подхватывает ивент и обновляет таблицу доступных стран -->
-                </li>
-              </ul>
-              <a href="#">На шаг назад</a>
-              <a href="#">Следующий шаг</a>
-            </fieldset>
+                  <div class="form-number form-number--duration">
+                    <label class="form-number__label" for="duration">Длительность:</label>
+                    <div class="form-number__group">
+                      <input class="form-number__input" id="duration" name="duration" type="number" min="1" value="2">
+                      <button class="form-number__button form-number__button--decrement" type="button" aria-label="Уменьшить длительность поездки на 1 день"></button>
+                      <button class="form-number__button form-number__button--increment" type="button" aria-label="Увеличить длительность поездки на 1 день"></button>
+                    </div>
+                  </div>
+                  <input class="form-routes-planing__input-option visually-hidden" id="with-children" type="checkbox" name="with-children" value="with-children" checked>
+                  <label class="form-routes-planing__label" for="with-children">Можно с детьми</label>
+                </div>
+                <table class="form-calendar">
+                  <thead class="form-calendar__head">
+                    <tr class="form-calendar__controls">
+                      <td class="form-calendar__control">
+                        <button class="form-calendar__toggle" type="button" aria-label="Предыдущий месяц"></button>
+                      </td>
+                      <th class="form-calendar__month" colspan="5">Март 2019</th>
+                      <td class="form-calendar__control">
+                        <button class="form-calendar__toggle" type="button" aria-label="Следующий месяц"></button>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody class="form-calendar__body">
+                    <tr class="form-calendar__days">
+                      <td class="form-calendar__day form-calendar__day--monday">П</td>
+                      <td class="form-calendar__day form-calendar__day--tuesday">В</td>
+                      <td class="form-calendar__day form-calendar__day--wednesday">С</td>
+                      <td class="form-calendar__day form-calendar__day--thursday">Ч</td>
+                      <td class="form-calendar__day form-calendar__day--friday">П</td>
+                      <td class="form-calendar__day form-calendar__day--saturday form-calendar__day--weekend">С</td>
+                      <td class="form-calendar__day form-calendar__day--sunday form-calendar__day--weekend">В</td>
+                    </tr>
+                    <tr class="form-calendar__dates">
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-02-23" value="2019-02-23" disabled>
+                        <label class="form-calendar__button" for="date--2019-02-23">23</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-02-24" value="2019-02-24" disabled>
+                        <label class="form-calendar__button" for="date--2019-02-24">24</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-02-25" value="2019-02-25" disabled>
+                        <label class="form-calendar__button" for="date--2019-02-25">25</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-02-26" value="2019-02-26" disabled>
+                        <label class="form-calendar__button" for="date--2019-02-26">26</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-02-27" value="2019-02-27" disabled>
+                        <label class="form-calendar__button" for="date--2019-02-27">27</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-02-28" value="2019-02-28" disabled>
+                        <label class="form-calendar__button" for="date--2019-02-28">28</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-01" value="2019-03-01" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-01">1</label>
+                      </td>
+                    </tr>
+                    <tr class="form-calendar__dates">
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-02" value="2019-03-02" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-02">2</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-03" value="2019-03-03" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-03">3</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-04" value="2019-03-04" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-04">4</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-05" value="2019-03-05" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-05">5</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-06" value="2019-03-06" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-06">6</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-07" value="2019-03-07" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-07">7</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-08" value="2019-03-08" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-08">8</label>
+                      </td>
+                    </tr>
+                    <tr class="form-calendar__dates">
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-09" value="2019-03-09" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-09">9</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-10" value="2019-03-10" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-10">10</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-11" value="2019-03-11" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-11">11</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-12" value="2019-03-12" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-12">12</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-13" value="2019-03-13" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-13">13</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-14" value="2019-03-14" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-14">14</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-15" value="2019-03-15" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-15">15</label>
+                      </td>
+                    </tr>
+                    <tr class="form-calendar__dates">
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-16" value="2019-03-16" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-16">16</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-17" value="2019-03-17" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-17">17</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-18" value="2019-03-18" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-18">18</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-19" value="2019-03-19" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-19">19</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-20" value="2019-03-20" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-20">20</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-21" value="2019-03-21" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-21">21</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-22" value="2019-03-22" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-22">22</label>
+                      </td>
+                    </tr>
+                    <tr class="form-calendar__dates">
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-23" value="2019-03-23" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-23">23</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-24" value="2019-03-24" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-24">24</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-25" value="2019-03-25" disabled>
+                        <label class="form-calendar__button" for="date--2019-03-25">25</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-26" value="2019-03-26" checked>
+                        <label class="form-calendar__button" for="date--2019-03-26">26</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-27" value="2019-03-27" checked>
+                        <label class="form-calendar__button" for="date--2019-03-27">27</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-28" value="2019-03-28" checked>
+                        <label class="form-calendar__button" for="date--2019-03-28">28</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-29" value="2019-03-29">
+                        <label class="form-calendar__button" for="date--2019-03-29">29</label>
+                      </td>
+                    </tr>
+                    <tr class="form-calendar__dates">
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-30" value="2019-03-30">
+                        <label class="form-calendar__button" for="date--2019-03-30">30</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-03-31" value="2019-03-31">
+                        <label class="form-calendar__button" for="date--2019-03-31">31</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-04-01" value="2019-04-01">
+                        <label class="form-calendar__button" for="date--2019-04-01">1</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-04-02" value="2019-04-02">
+                        <label class="form-calendar__button" for="date--2019-04-02">2</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-04-03" value="2019-04-03">
+                        <label class="form-calendar__button" for="date--2019-04-03">3</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-04-04" value="2019-04-04">
+                        <label class="form-calendar__button" for="date--2019-04-04">4</label>
+                      </td>
+                      <td class="form-calendar__date">
+                        <input class="form-calendar__input-option visually-hidden" type="checkbox" name="selected-dates" id="date--2019-04-05" value="2019-04-05">
+                        <label class="form-calendar__button" for="date--2019-04-05">5</label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </fieldset>
+              <footer class="form-plans__controls">
+                <a class="form-plans__link form-plans__link--next" href="#form-plans__section--02">Следующий шаг</a>
+              </footer>
+            </section>
 
-            <fieldset class="form-plans__section">
-              <legend class="form-plans__title">Шаг 3. Развлечения</legend>
-              <p class="form-plans__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-              <ol class="form-plans__progress-bar progress-bar">
-                <li>Даты</li>
-                <li>Маршрут</li>
-                <li>Развлечения</li>
-              </ol>
-              <ul class="selected-countries-list">
-                <li class="selected-countries-list__item">
-                  <p class="selected-countries-list__name">Босния и Герцеговина</p>
-                  <textarea class="selected-countries-list__text-area" placeholder="План действий"></textarea>
-                </li>
-                <li class="selected-countries-list__item">
-                  <p class="selected-countries-list__name">Чехия</p>
-                  <textarea class="selected-countries-list__text-area" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-                </li>
-              </ul>
-              <a href="#">На шаг назад</a>
-              <input type="submit" value="отправить">
-            </fieldset>
-          </form>
+            <section id="form-plans__section--02" class="form-plans__section">
+              <header class="form-plans__header">
+                <h3 class="form-plans__title">Шаг 2. <br>Маршрут</h3>
+                <p class="form-plans__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+                <ol class="form-plans__progress progress-steps">
+                  <li class="progress-steps__item">Даты</li>
+                  <li class="progress-steps__item progress-steps__item--active">Маршрут</li>
+                  <li class="progress-steps__item">Развлечения</li>
+                </ol>
+              </header>
+              <fieldset class="js-routes-selection js-routes-selection--no-js">
+                <legend class="js-routes-selection__legend">Выберете страну(ы)</legend>
+                <label class="visually-hidden" for="country-selection--01">Выберите страну</label>
+                <input class="js-routes-selection__input" id="country-selection--01" list="js-countries-datalist" name="js-selected-countries" placeholder="Выберите страну" value="Босния и Герцеговина" required>
+                <label class="visually-hidden" for="country-selection--02">Выберите страну</label>
+                <input class="js-routes-selection__input" id="country-selection--02" list="js-countries-datalist" name="js-selected-countries" placeholder="Выберите страну" value="Чехия">
+                <label class="visually-hidden" for="country-selection--03">Выберите страну</label>
+                <input class="js-routes-selection__input" id="country-selection--03" list="js-countries-datalist" name="js-selected-countries" placeholder="Выберите страну">
+              </fieldset>
+              <fieldset class="form-plans__fieldset form-routes js-form-routes js-form-routes--no-js">
+                <ul class="form-plans__routes-list routes-list">
+                  <li class="routes-list__item routes-list__item--active">
+                    <button type="button" class="routes-list__button">Босния и герцеговина</button>
+                    <div class="routes-list__flag routes-list__flag--bosnia"></div>
+                    <button class="routes-list__button-delete"></button>
+                  </li>
+                  <li class="routes-list__item routes-list__item--active">
+                    <button type="button" class="routes-list__button">Чехия</button>
+                    <div class="routes-list__flag routes-list__flag--czech"></div>
+                    <button class="routes-list__button-delete"></button>
+                  </li>
+                  <li class="routes-list__item">
+                    <button type="button" class="routes-list__button routes-list__button--select">Выберите страну</button>
+                    <button class="routes-list__button-delete"></button>
+                  </li>
+                  <li class="routes-list__item">
+                    <button type="button" class="routes-list__button routes-list__button--add">Добавить страну</button>
+                  </li>
+                </ul>
+              </fieldset>
+              <footer class="form-plans__controls">
+                <a class="form-plans__link form-plans__link--next" href="#form-plans__section--03">Следующий шаг</a>
+                <a class="form-plans__link form-plans__link--prev" href="#form-plans__section--01">На шаг назад</a>
+              </footer>
+            </section>
+
+            <section id="form-plans__section--03" class="form-plans__section">
+              <header class="form-plans__header">
+                <h3 class="form-plans__title">Шаг 3. <br>Развлечения</h3>
+                <p class="form-plans__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                <ol class="form-plans__progress progress-steps">
+                  <li class="progress-steps__item">Даты</li>
+                  <li class="progress-steps__item">Маршрут</li>
+                  <li class="progress-steps__item progress-steps__item--active">Развлечения</li>
+                </ol>
+              </header>
+              <fieldset class="form-plans__fieldset form-selected-routes">
+                <ul class="selected-countries-list">
+                  <li class="selected-countries-list__item selected-countries-list__item--bosnia">
+                    <label for="selected-country--bosnia" class="selected-countries-list__name">Босния и Герцеговина</label>
+                    <textarea id="selected-country--bosnia" class="selected-countries-list__text-area" placeholder="План действий" name="selected-country--bosnia-plan" required></textarea>
+                  </li>
+                  <li class="selected-countries-list__item selected-countries-list__item--czech">
+                    <label for="selected-country--czech" class="selected-countries-list__name">Чехия</label>
+                    <textarea id="selected-country--czech" class="selected-countries-list__text-area" placeholder="План действий" name="selected-country--czech-plan" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  </li>
+                </ul>
+              </fieldset>
+              <footer class="form-plans__controls">
+                <button class="form-plans__link form-plans__link--next">Отправить</button>
+                <a class="form-plans__link form-plans__link--prev" href="#form-plans__section--02">На шаг назад</a>
+              </footer>
+            </section>
+
+          </div>
         </div>
       </section>
+    </form>
+  </main>
+  <!-- Изменить футер -->
+  <footer class="page-footer">
+    <div class="page-footer__wrapper wrapper">
+      <a class="page-footer__logo site-logo" href="#">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+          <img class="site-logo__image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип Погнали">
+        </picture>
+      </a>
+      <ul class="page-footer__socials socials-list">
+        <li class="socials-list__item">
+          <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Погнали на Facebook"></a>
+        </li>
+        <li class="socials-list__item">
+          <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Погнали в Вонтакте"></a>
+        </li>
+        <li class="socials-list__item">
+          <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Погнали в Instagram"></a>
+        </li>
+      </ul>
+      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+    </div>
+  </footer>
+  <datalist id="js-countries-datalist">
+    <option value="Босния и Герцеговина"></option>
+    <option value="Чехия"></option>
+  </datalist>
+  <script src="js/form.js"></script>
+</body>
 
-    </main>
-<!-- Изменить футер -->
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <a class="page-footer__logo logo" href="#">
-          <img src="https://via.placeholder.com/150x150" alt="">
-        </a>
-        <ul class="page-footer__socials socials-list">
-          <li class="socials-list__item">
-            <a class="socials-list__link socials-list__link--facebook" href="https://www.facebook.com/htmlacademy">
-              <span>Мы в Фейсбуке</span>
-            </a>
-          </li>
-          <li class="socials-list__item">
-            <a class="socials-list__link socials-list__link--vkontakte" href="https://vk.com/htmlacademy">
-              <span>Мы в Вконтакте</span>
-            </a>
-          </li>
-          <li class="socials-list__item">
-            <a class="socials-list__link socials-list__link--instagram" href="https://www.instagram.com/htmlacademy">
-              <span>Мы в Инстаграме</span>
-            </a>
-          </li>
-        </ul>
-        <div class="page-footer__copyright copyright">
-          <p class="copyright__text">Разработано</p>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        </div>
-      </div>
-    </footer>
-  </body>
 </html>

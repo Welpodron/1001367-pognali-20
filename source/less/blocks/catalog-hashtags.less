@@ -1,0 +1,13 @@
+.catalog-hashtags {
+  .set-font(@font-size: 15px, @line-height: 18px, @color: @special-grey);
+  .set-padding(@r: 68px, @l: 26px);
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 20px, @line-height: 23px, @color: @basic-black);
+    .set-padding(@t: 18px, @r: 100px, @l: 7px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-padding(@t: 21px, @r: 40px, @l: 8px);
+  }
+}

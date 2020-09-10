@@ -6,20 +6,31 @@
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "9.8.4",
     "browser-sync": "2.26.7",
+    "gulp": "4.0.2",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-footer": "^2.0.2",
+    "gulp-inject": "^5.0.5",
     "gulp-less": "4.0.1",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
     "gulp-sourcemaps": "2.6.5",
-    "gulp": "4.0.2",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-svgstore": "^7.0.1",
     "stylelint": "13.6.1",
-    "stylelint-config-htmlacademy": "0.1.4"
+    "stylelint-config-htmlacademy": "0.1.4",
+    "through2": "^4.0.2",
+    "vinyl": "^2.2.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp styles",
-    "start": "gulp"
+    "start": "gulp",
+    "git": "git checkout %BRANCH% & git add . & git commit -m \"%BRANCH% была изменена согласно заданию\" & git push -u origin %BRANCH% & start https://github.com/htmlacademy-adaptive/1001367-pognali-20/compare/master...Welpodron:%BRANCH%"
   },
   "browserslist": [
     "last 2 versions",

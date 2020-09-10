@@ -1,0 +1,39 @@
+.js-routes-selection {
+  display: none;
+
+  .reset-fieldset();
+  .set-margin(@b: 25px);
+
+  &--no-js {
+    display: block;
+  }
+}
+
+.js-routes-selection__legend {
+  .set-font(@font-size: 16px, @line-height: 22px, @color: @special-grey);
+  .set-margin(@t: 0, @b: 19px);
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 20px, @line-height: 24px);
+    .set-margin(@b: 39px);
+  }
+}
+
+.js-routes-selection__input {
+  background-clip: padding-box;
+
+  .set-block-size(@width: 100%);
+  .set-border(@all: 1px solid @basic-gray-light-3);
+  .set-border-radius(@all: 4px);
+  .set-font(@font-weight: @medium, @font-size: 14px, @line-height: 18px, @color: @basic-blue-light, @text-align: left, @text-transform: uppercase, @letter-spacing: 0.1em);
+  .set-padding(@t: 12px, @r: 9px, @b: 10px, @l: 9px);
+
+  &:not(:last-of-type) {
+    .set-margin(@b: 22px);
+  }
+
+  @media (min-width: @tablet-width) {
+    .set-font(@font-size: 20px, @line-height: 20px);
+    .set-padding(@t: 24px, @r: 9px, @b: 24px, @l: 22px);
+  }
+}

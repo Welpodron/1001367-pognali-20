@@ -1,33 +1,80 @@
 .transport-list {
   display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+  justify-content: space-between;
+  width: 120px;
+  flex-wrap: wrap;
+  .reset-list();
 }
 
 .transport-list__item {
   position: relative;
 
-  width: 25px;
+  display: grid;
   height: 25px;
 
-  background-size: 25px 25px;
+  place-items: center;
+}
+
+.transport-list__item--available .transport-list__icon {
+  opacity: 1;
+}
+
+.transport-list__icon {
+  width: 20px;
+  height: 20px;
+
+  opacity: 0.15;
 
   &--air-flight {
-    background-image: url("../../img/plane.svg");
+    .set-sprite-background(20px,20px,@transport-plane);
   }
 
   &--vehicle {
-    background-image: url("../../img/bus.svg");
+    .set-sprite-background(20px,20px,@transport-bus);
   }
 
   &--bicycle {
-    background-image: url("../../img/bike.svg");
+    .set-sprite-background(20px,20px,@transport-bike);
   }
 
   &--on-foot {
-    background-image: url("../../img/run.svg");
+    .set-sprite-background(20px,20px,@transport-run);
   }
+}
+
+.transport-list__item:hover::after {
+  content: attr(aria-label);
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  z-index: 1;
+
+  width: auto;
+  min-width: 110px;
+  padding: 10px 1em;
+
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #101d41;
+  border-radius: 4px;
+  transform: translateX(-50%);
+}
+
+.transport-list__item:hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 1;
+
+  width: 0;
+  height: 0;
+
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #101d41;
+  border-left: 5px solid transparent;
+  transform: translateX(-50%);
 }

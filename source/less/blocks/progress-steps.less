@@ -1,0 +1,35 @@
+.progress-steps {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    justify-content: flex-end;
+
+    .reset-list();
+    row-gap: 20px;
+    .set-margin(@t: 5px, @r: 46px);
+    .set-font(@font-size: 20px, @line-height: 24px, @color: fade(@basic-black, 60%), @text-transform: uppercase, @letter-spacing: 0.1em);
+  }
+}
+
+.progress-steps__item {
+  display: inline-flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+
+    .set-background(@color: fade(@basic-blue-light, 30%));
+    .set-block-size(@width: 6px, @height: 6px);
+    .set-border-radius(@all: 50%);
+    .set-margin(@r: 36px);
+  }
+
+  &--active {
+    .set-font(@color: @basic-black);
+
+    &::before {
+      .set-background(@color: @basic-blue-light);
+    }
+  }
+}

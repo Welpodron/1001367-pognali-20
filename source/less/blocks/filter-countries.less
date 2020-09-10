@@ -1,29 +1,178 @@
 .filter-countries {
-  padding: 0 25px;
+  border-radius: 0 0 20px 20px;
+  background-color: #e2e5f2;
+}
 
-  @media (min-width: 768px) {
-    padding: 0 40px;
+.filter-countries__wrapper {
+  display: grid;
+
+  grid-template-columns: 1fr min-content;
+
+  .set-padding(@t: 20px, @b: 16px);
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: min-content min-content;
+    .set-padding(@t: 60px, @b: 58px);
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 285px);
+    column-gap: 60px;
   }
 }
 
-.filter-countries__desc {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
+.filter-countries__description {
+  display: flex;
+  align-items: center;
 
-  @media (min-width: 768px) {
+  .set-font(@font-weight: bold, @font-size: 16px, @line-height: 18px, @color: @special-blue-dark, @text-transform: uppercase);
+  .set-margin(@t: 0, @b: 0);
+
+  &::before {
+    content: "";
+
+    .set-block-size(@width: 15px, @height: 10px);
+    .set-margin(@r: 12px);
+    .set-sprite-background(@width: 15px, @height: 10px, @index: @utils-filter-spd);
+  }
+
+  &::after {
+    display: none;
+
+    content: ":";
+  }
+
+  &--active::after {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
     display: none;
   }
+}
 
-  @media (min-width: 1440px) {
-    display: block;
-    font-size: 20px;
-    line-height: 20px;
+.filter-countries__table-countries {
+  .set-margin(@b: 12px);
+
+  @media (min-width: @tablet-width) {
+    .set-margin(@b: 0);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
-// ИЗМЕНИТЬ !
-body > main > section.catalog-grid__filter-countries.filter-countries > div > div > div {
+.filter-countries__button {
+  &--toggle {
+    display: flex;
+    align-items: center;
+
+    .set-background(@color: transparent);
+    .set-border(@all: none);
+    .set-font(@font-size: 0);
+    .set-padding(@all: 0);
+    .set-margin(@r: 4px);
+
+    &::after {
+      content: "";
+
+      .set-block-size(@width: 17px, @height: 3px);
+      .set-sprite-background(@width: 17px, @height: 3px, @index: @utils-dots-spd);
+    }
+  }
+
+  &--toggle-active {
+    .set-margin(@t: -4px, @r: 6px);
+
+    &::after {
+      .set-block-size(@width: 14px, @height: 14px);
+      .set-sprite-background(@width: 14px, @height: 14px, @index: @utils-close);
+    }
+  }
+
+  &--close {
+    .set-background(@color: tomato);
+    .set-block-size(@width: 100%);
+    .set-border(@all: none);
+    .set-border-radius(@all: 20px);
+    .set-margin(@t: 30px);
+  }
+
+  @media (min-width: @tablet-width) {
+    &--toggle {
+      word-break: break-all;
+      .set-block-size(@width: 185px);
+      justify-content: space-between;
+      .set-margin(@r: 33px);
+      .set-font(@font-weight: bold, @font-size: 20px, @line-height: 20px, @color: @special-blue-dark, @text-transform: uppercase);
+
+      &::after {
+        .set-block-size(@width: 30px, @height: 15px);
+        flex-shrink: 0;
+        .set-sprite-background(@width: 30px, @height: 15px, @index: @utils-dots-spd);
+      }
+    }
+
+    &--toggle-active {
+      .set-margin(@t: 0, @r: 35px);
+      .set-block-size(@width: 172px);
+
+      &::after {
+        .set-block-size(@width: 20px, @height: 20px);
+        .set-sprite-background(@width: 20px, @height: 20px, @index: @utils-close);
+      }
+    }
+
+    &--close {
+      grid-column: ~"1 / -1";
+    }
+  }
+}
+
+.filter-countries__dropdown {
   display: none;
+
+  grid-column: ~"1 / -1";
+
+  &--active {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    &--active {
+      display: grid;
+      .set-margin(@t: 60px);
+      justify-content: space-between;
+      grid-template-columns: 420px auto;
+    }
+  }
+}
+
+.filter-countries__catalog-countries {
+  @media (min-width: @tablet-width) {
+    .set-margin(@r: 56px);
+  }
+}
+
+.filter-countries__catalog-regions {
+  grid-area: ~"2 / 1 / 2 / -1";
+
+  @media (max-width: @tablet-width - 1px) {
+    display: none;
+
+    &--active {
+      .set-margin(@t: 32px, @b: 23px);
+      display: grid;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-area: ~"1 / 1 / 1 / 2";
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: ~"1 / 2 / 1 / span 2";
+  }
 }
